@@ -1,0 +1,1698 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SS Trading | Shipbuilding in Bangladesh, Newbuild Estimates &amp; Marine Supply</title>
+<meta name="description" content="SS Trading, Chattogram: shipbuilding project management, newbuilds at Bangladeshi yards with an instant cost estimate, and supply of pontoons, barges and small vessels.">
+<link rel="canonical" href="https://sst-tsdhel.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SS Trading">
+<meta property="og:title" content="SS Trading | Ships built in Bangladesh, delivered to the world">
+<meta property="og:description" content="SS Trading, Chattogram: shipbuilding project management, newbuilds at Bangladeshi yards with an instant cost estimate, and supply of pontoons, barges and small vessels.">
+<meta property="og:url" content="https://sst-tsdhel.com/">
+<meta property="og:image" content="https://sst-tsdhel.com/sar-afloat.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0B4B9C">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@112,500;112,700;125,800&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Base reset */
+:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html,body{margin:0}
+img{max-width:100%}
+/* Layout: a naval-architecture drawing sheet in SS Trading's own blues (logo swoosh + the deck's cyan-over-blue band). Each page is a numbered sheet; the hero is a live build-and-launch drawing. */
+:root{
+  --paper:#F3F7FB;
+  --sheet:#FFFFFF;
+  --ink:#0E2238;
+  --ink-2:#506579;
+  --rule:#D2DEE9;
+  --brand:#2683C6;
+  --brand-deep:#0B4B9C;
+  --cyan:#1CADE4;
+  --logo-grey:#8A8F94;
+  --deep:#0B3A6E;
+  --deep-ink:#EAF3FB;
+  --deep-ink-2:#A9C3DB;
+  --land:#E2E9F0;
+  --water:#D5EDF8;
+  --antifoul:#B5432F;
+  --display:"Archivo","Arial Narrow","Helvetica Neue",Arial,sans-serif;
+  --body:"Public Sans","Segoe UI",Helvetica,Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+  --wrap:1180px;
+  --gut:clamp(16px,4vw,40px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#06121F;--sheet:#0C1D30;--ink:#E3EDF6;--ink-2:#97ADC2;--rule:#1C334C;
+  --brand:#4A9FDE;--brand-deep:#5B95DE;--cyan:#49C3EC;--logo-grey:#9AA3AB;
+  --deep:#0A2A4C;--deep-ink:#EAF3FB;--deep-ink-2:#A9C3DB;
+  --land:#12253A;--water:#0D2F46;--antifoul:#C9553F;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#06121F;--sheet:#0C1D30;--ink:#E3EDF6;--ink-2:#97ADC2;--rule:#1C334C;
+  --brand:#4A9FDE;--brand-deep:#5B95DE;--cyan:#49C3EC;--logo-grey:#9AA3AB;
+  --deep:#0A2A4C;--deep-ink:#EAF3FB;--deep-ink-2:#A9C3DB;
+  --land:#12253A;--water:#0D2F46;--antifoul:#C9553F;color-scheme:dark}
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{background:var(--paper);color:var(--ink);font:400 16px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gut)}
+h1,h2,h3{font-family:var(--display);font-stretch:112%;line-height:1.08;text-wrap:balance;margin:0;letter-spacing:-.01em}
+h1{font-size:clamp(2.1rem,5vw,3.8rem);font-weight:800;font-stretch:125%}
+h2{font-size:clamp(1.6rem,3vw,2.3rem);font-weight:700}
+h3{font-size:1.15rem;font-weight:700}
+p{margin:0}
+.lede{font-size:1.12rem;color:var(--ink-2);max-width:62ch}
+.eyebrow{font:500 .74rem/1.3 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2)}
+.eyebrow b{color:var(--brand);font-weight:500}
+.note{font-size:.88rem;color:var(--ink-2)}
+.mt{margin-top:28px}
+
+/* Header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+.top .wrap{display:flex;align-items:center;gap:20px;min-height:68px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto}
+.mark{width:46px;height:34px;flex:none}
+.word{font:800 1.3rem/1 var(--display);font-stretch:112%;color:var(--brand)}
+.word span{font-weight:500;font-size:.8rem;color:var(--logo-grey);letter-spacing:.02em;margin-left:2px}
+.brand-sub{display:block;font:400 .62rem/1.2 var(--mono);letter-spacing:.1em;color:var(--ink-2);text-transform:uppercase;margin-top:4px}
+.nav{display:flex;align-items:center;gap:2px}
+.nav a{text-decoration:none;font-weight:500;font-size:.9rem;padding:8px 11px;color:var(--ink-2);border-radius:4px}
+.nav a:hover{color:var(--ink);background:var(--sheet)}
+.nav a[aria-current="page"]{color:var(--ink);box-shadow:inset 0 -3px 0 var(--cyan);border-radius:0}
+.nav a.cta{background:var(--brand);color:#fff;margin-left:8px;box-shadow:none}
+.nav a.cta:hover{background:var(--brand-deep)}
+.menu-btn{display:none;background:none;border:1px solid var(--rule);color:var(--ink);font:500 .8rem var(--mono);letter-spacing:.08em;padding:8px 12px;border-radius:4px;cursor:pointer}
+@media (max-width:1120px){
+  .menu-btn{display:block}
+  .nav{position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;background:var(--paper);border-bottom:1px solid var(--rule);padding:8px var(--gut) 16px;display:none}
+  .nav.open{display:flex}
+  .nav a{padding:12px 4px;border-bottom:1px solid var(--rule)}
+  .nav a.cta{margin:12px 0 0;text-align:center}
+}
+
+/* Buttons */
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font:600 .95rem var(--body);padding:12px 20px;border-radius:4px;border:1.5px solid var(--ink);cursor:pointer;background:none;color:var(--ink)}
+.btn.solid{background:var(--brand);border-color:var(--brand);color:#fff}
+.btn.solid:hover{background:var(--brand-deep);border-color:var(--brand-deep)}
+.btn:not(.solid):hover{background:var(--ink);color:var(--paper)}
+.btn.sm{padding:8px 14px;font-size:.86rem}
+.arr{font-family:var(--mono)}
+.deep .btn:not(.solid){border-color:var(--deep-ink);color:var(--deep-ink)}
+.deep .btn:not(.solid):hover{background:var(--deep-ink);color:var(--deep)}
+
+/* Sheet header */
+.sheet-head{padding-block:clamp(40px,7vw,76px) clamp(28px,4vw,44px);border-bottom:1px solid var(--rule)}
+.sheet-head .wrap{display:grid;gap:18px}
+section.band{padding-block:clamp(48px,7vw,84px)}
+section.band + section.band{border-top:1px solid var(--rule)}
+.band-head{display:grid;gap:12px;margin-bottom:clamp(26px,4vw,40px);max-width:780px}
+.deep{background:var(--deep);color:var(--deep-ink)}
+.deep .eyebrow,.deep .lede,.deep p{color:var(--deep-ink-2)}
+.deep h2,.deep h3{color:var(--deep-ink)}
+.deep .eyebrow b{color:var(--cyan)}
+
+/* Hero */
+.hero{padding-block:clamp(32px,5vw,60px) 0}
+.hero-top{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.9fr);gap:clamp(20px,4vw,56px);align-items:center}
+.qcard{background:var(--sheet);border:1px solid var(--rule);padding:24px;display:grid;gap:14px;position:relative;box-shadow:0 18px 40px -24px color-mix(in srgb,var(--brand-deep) 45%,transparent)}
+.qcard::before{content:"";position:absolute;left:-1px;right:-1px;top:-1px;height:5px;background:linear-gradient(90deg,var(--cyan),var(--brand))}
+.qcard h2{font-size:1.4rem}
+.qcard .btn{justify-content:center}
+
+/* Estimator */
+:root{--s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;--s4:#eda100;--s5:#e87ba4}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--s1:#3987e5;--s2:#d95926;--s3:#199e70;--s4:#c98500;--s5:#d55181}}
+:root[data-theme="dark"]{--s1:#3987e5;--s2:#d95926;--s3:#199e70;--s4:#c98500;--s5:#d55181}
+.est{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:24px;align-items:start}
+@media (max-width:960px){.est{grid-template-columns:1fr}}
+.est-form{display:grid;gap:16px;min-width:0}
+fieldset{border:1px solid var(--rule);background:var(--sheet);padding:16px 20px 20px;margin:0;display:grid;gap:14px;min-width:0}
+legend{font:500 .72rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--brand);padding:0 6px}
+.f3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.f4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+@media (max-width:640px){.f3,.f4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.hint{font:400 .72rem var(--body);letter-spacing:0;text-transform:none;color:var(--ink-2)}
+.check{display:flex;gap:10px;align-items:center;text-transform:none;letter-spacing:0;font:500 .92rem var(--body);color:var(--ink)}
+.check input{width:18px;height:18px;padding:0}
+.result{position:sticky;top:calc(env(safe-area-inset-top,0px) + 84px);background:var(--sheet);border:1px solid var(--rule);border-top:5px solid var(--brand);padding:24px;display:grid;gap:18px;min-width:0}
+.price{font:800 clamp(1.9rem,3.6vw,2.7rem)/1.05 var(--display);font-stretch:112%;font-variant-numeric:tabular-nums;color:var(--ink)}
+.sub{font-size:.95rem;color:var(--ink-2)}
+.sub b{color:var(--ink);font-weight:600}
+.bar{display:flex;gap:2px;height:16px}
+.bar span{display:block;height:100%;min-width:2px;transition:flex-grow .4s ease}
+.bar span:first-child{border-radius:4px 0 0 4px}.bar span:last-child{border-radius:0 4px 4px 0}
+.legendl{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:.9rem}
+.legendl li{display:grid;grid-template-columns:12px minmax(0,1fr) auto 44px;gap:10px;align-items:center}
+.legendl i{width:12px;height:12px;border-radius:2px;display:block}
+.legendl .v,.legendl .p{font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:.82rem;text-align:right}
+.legendl .p{color:var(--ink-2)}
+.kfig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.kfig div{background:var(--sheet);padding:10px 12px;display:grid;gap:2px}
+.kfig b{font:700 1.1rem var(--display);font-stretch:112%;font-variant-numeric:tabular-nums}
+.kfig span{font:500 .66rem var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2)}
+.pay{width:100%;border-collapse:collapse;font-size:.88rem;min-width:0}
+.pay td{padding:6px 0;border-bottom:1px solid var(--rule)}
+.pay td:last-child{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums}
+.warnline{font-size:.85rem;color:var(--ink);background:color-mix(in srgb,var(--s4) 16%,transparent);padding:8px 10px;border-radius:2px}
+.hero-top > div{display:grid;gap:20px;min-width:0}
+.hero h1 em{font-style:normal;color:var(--brand)}
+@media (max-width:860px){.hero-top{grid-template-columns:1fr}}
+.yard{margin-top:clamp(24px,4vw,40px);background:var(--sheet);border:1px solid var(--rule);position:relative}
+.yard svg{display:block;width:100%;height:auto}
+.yard-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 20px;padding:12px 16px;border-top:1px solid var(--rule)}
+.stages{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.stages li{font:500 .7rem var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:6px 10px;border:1px solid var(--rule);color:var(--ink-2);border-radius:999px;transition:background .3s,color .3s,border-color .3s}
+.stages li.on{background:var(--brand);border-color:var(--brand);color:#fff}
+.stages li.done{color:var(--ink);border-color:var(--brand)}
+.yard-cap{font:400 .74rem var(--mono);color:var(--ink-2);letter-spacing:.04em}
+.yard-tag{position:absolute;left:16px;top:12px;font:500 .68rem var(--mono);letter-spacing:.12em;color:var(--ink-2);text-transform:uppercase}
+/* yard drawing */
+.y-grid{stroke:var(--rule);stroke-width:.6}
+.y-land{fill:var(--land)}
+.y-water{fill:var(--water)}
+.y-line{stroke:var(--ink);fill:none;stroke-width:1.4}
+.y-thin{stroke:var(--ink-2);fill:none;stroke-width:1}
+.y-steel{fill:var(--brand-deep)}
+.y-beam{fill:var(--brand)}
+.y-blk{fill:var(--sheet);stroke:var(--ink);stroke-width:1.2}
+.y-frame{stroke:var(--brand);stroke-width:1.2}
+.y-keel{stroke:var(--ink);stroke-width:3}
+.y-hullpaint{fill:var(--brand-deep)}
+.y-anti{fill:var(--antifoul)}
+.y-boot{fill:var(--sheet)}
+.y-sup{fill:var(--sheet);stroke:var(--ink);stroke-width:1.2}
+.y-win{fill:var(--cyan)}
+.y-wave{stroke:var(--brand);stroke-width:1.2;fill:none;opacity:.55}
+.y-wake{stroke:var(--sheet);stroke-width:2;fill:none;stroke-linecap:round}
+.y-smoke{fill:var(--logo-grey);opacity:.35}
+.y-txt{fill:var(--ink-2);font:500 9px var(--mono);letter-spacing:.08em}
+.y-txt-w{fill:#fff;font:500 8px var(--mono);letter-spacing:.14em}
+.drift{animation:drift 7s linear infinite}
+@keyframes drift{to{transform:translateX(-40px)}}
+
+.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--rule);margin-top:clamp(28px,4vw,48px)}
+.fact{padding:20px 20px 24px 0;display:grid;gap:6px;align-content:start}
+.fact + .fact{padding-left:20px;border-left:1px solid var(--rule)}
+.fact .n{font:800 1.85rem/1 var(--display);font-stretch:125%;font-variant-numeric:tabular-nums;color:var(--brand-deep)}
+.fact .l{font-size:.9rem;color:var(--ink-2);max-width:28ch}
+@media (max-width:760px){.facts{grid-template-columns:repeat(2,minmax(0,1fr))}.fact:nth-child(3){padding-left:0;border-left:0}.fact:nth-child(n+3){border-top:1px solid var(--rule)}}
+
+/* Grids & panels */
+.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.grid-4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+@media (max-width:980px){.grid-4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:860px){.grid-3{grid-template-columns:1fr}}
+@media (max-width:640px){.grid-2,.grid-4{grid-template-columns:1fr}}
+.panel{background:var(--sheet);border:1px solid var(--rule);border-radius:2px;padding:24px;display:grid;gap:12px;align-content:start;min-width:0}
+.panel p{color:var(--ink-2)}
+.tag{font:500 .7rem var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--brand)}
+.more{font-weight:600;text-decoration:none;font-size:.92rem;color:var(--brand-deep)}
+.more:hover{color:var(--brand)}
+.service{position:relative;padding-top:30px}
+.service::before{content:"";position:absolute;left:24px;top:0;width:44px;height:4px;background:linear-gradient(90deg,var(--cyan),var(--brand))}
+.list{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.list li{padding-left:18px;position:relative;color:var(--ink-2)}
+.list li::before{content:"";position:absolute;left:0;top:.72em;width:8px;height:2px;background:var(--brand)}
+.deep .list li{color:var(--deep-ink-2)}
+
+/* Illustration cards */
+.card{background:var(--sheet);border:1px solid var(--rule);display:grid;grid-template-rows:auto 1fr;min-width:0}
+.illo{aspect-ratio:3/2;max-width:100%;background-color:var(--paper);background-image:linear-gradient(var(--rule) 1px,transparent 1px),linear-gradient(90deg,var(--rule) 1px,transparent 1px);background-size:20px 20px;background-position:-1px -1px;border-bottom:1px solid var(--rule);display:grid;place-items:center;overflow:hidden}
+.illo svg{width:88%;height:auto}
+.card-body{padding:20px 22px 22px;display:grid;gap:8px;align-content:start}
+.card-body p{color:var(--ink-2);font-size:.95rem}
+.card .val{font:500 .82rem var(--mono);color:var(--ink);font-variant-numeric:tabular-nums}
+.photo{display:block;width:100%;max-width:100%;aspect-ratio:3/2;object-fit:cover;background:var(--land);border-bottom:1px solid var(--rule)}
+.card .photo{border-bottom:1px solid var(--rule)}
+.mosaic{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.mosaic figure{margin:0;position:relative;overflow:hidden;background:var(--land);min-width:0}
+.mosaic figure:first-child{grid-column:span 2;grid-row:span 2}
+.mosaic img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;transition:transform .6s ease}
+.mosaic figure:first-child img{position:absolute;inset:0;height:100%;aspect-ratio:auto}
+@media (max-width:860px){.mosaic figure:first-child{grid-row:auto;aspect-ratio:3/2}}
+.mosaic figure:hover img{transform:scale(1.03)}
+.mosaic figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 14px 12px;background:linear-gradient(transparent,rgba(5,20,38,.82));color:#fff;font-size:.88rem;line-height:1.35}
+.mosaic figcaption b{display:block;font:500 .66rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#9fdcf5;margin-bottom:3px}
+@media (max-width:860px){.mosaic{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.mosaic{grid-template-columns:1fr}.mosaic figure:first-child{grid-column:auto;grid-row:auto}}
+.strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.strip figure{margin:0;background:var(--sheet);border:1px solid var(--rule);min-width:0}
+.strip figcaption{padding:10px 12px;font-size:.85rem;color:var(--ink-2)}
+@media (max-width:760px){.strip{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:460px){.strip{grid-template-columns:1fr}}
+.il-s{fill:none;stroke:var(--brand-deep);stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.il-f{fill:var(--sheet);stroke:var(--brand-deep);stroke-width:2;stroke-linejoin:round}
+.il-a{fill:var(--brand)}
+.il-d{fill:var(--brand-deep)}
+.il-c{fill:var(--cyan)}
+.il-w{fill:none;stroke:var(--cyan);stroke-width:2;stroke-linecap:round}
+.il-win{fill:none;stroke:var(--cyan);stroke-width:6;stroke-dasharray:8 4}
+
+/* Why Bangladesh */
+.why{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,5vw,64px);align-items:start}
+@media (max-width:860px){.why{grid-template-columns:1fr}}
+.why-items{border-top:1px solid color-mix(in srgb,var(--deep-ink) 22%,transparent)}
+.why-item{display:grid;grid-template-columns:120px minmax(0,1fr);gap:20px;padding:18px 0;border-bottom:1px solid color-mix(in srgb,var(--deep-ink) 22%,transparent)}
+.why-item .k{font:500 .72rem/1.6 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--cyan)}
+@media (max-width:520px){.why-item{grid-template-columns:1fr;gap:4px}}
+
+/* Process */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));counter-reset:s;border-top:2px solid var(--brand-deep)}
+.steps li{counter-increment:s;padding:18px 14px 0 0;display:grid;gap:8px;align-content:start;position:relative}
+.steps li::before{content:"0" counter(s);font:500 .78rem var(--mono);color:var(--brand);letter-spacing:.08em}
+.steps li::after{content:"";position:absolute;top:-6px;left:0;width:10px;height:10px;background:var(--paper);border:2px solid var(--brand-deep);border-radius:50%}
+.steps h3{font-size:.98rem}
+.steps p{font-size:.88rem;color:var(--ink-2)}
+@media (max-width:980px){.steps{grid-template-columns:1fr;border-top:0;border-left:2px solid var(--brand-deep);margin-left:6px}.steps li{padding:0 0 24px 26px}.steps li::after{top:4px;left:-7px}}
+.steps.big{grid-template-columns:1fr;border-top:0;border-left:2px solid var(--brand-deep);margin-left:6px}
+.steps.big li{padding:0 0 32px 34px;grid-template-columns:minmax(0,260px) minmax(0,1fr);column-gap:32px}
+.steps.big li::before{grid-column:1/-1}
+.steps.big li::after{top:4px;left:-7px}
+.steps.big h3{font-size:1.15rem}
+.steps.big p{font-size:.98rem}
+@media (max-width:760px){.steps.big li{grid-template-columns:1fr}}
+
+/* Now building strip */
+.now{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,2fr);gap:clamp(20px,4vw,48px);align-items:start}
+@media (max-width:900px){.now{grid-template-columns:1fr}}
+.status{font:500 .72rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--brand);display:inline-flex;align-items:center;gap:8px}
+.status::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 4px color-mix(in srgb,var(--cyan) 25%,transparent)}
+
+/* People */
+.person{display:grid;grid-template-columns:64px minmax(0,1fr);gap:18px;align-items:start}
+.mono{width:64px;height:64px;display:grid;place-items:center;background:linear-gradient(135deg,var(--brand),var(--brand-deep));color:#fff;font:800 1.2rem var(--display);font-stretch:125%;border-radius:2px}
+.role{font:500 .72rem var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--brand);margin-top:4px}
+.person p{margin-top:10px;color:var(--ink-2);font-size:.95rem}
+.person .list{margin-top:12px;font-size:.92rem}
+.team{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border:1px solid var(--rule);background:var(--sheet)}
+.team > div{padding:18px;display:grid;gap:4px;align-content:start;min-width:0}
+.team > div + div{border-left:1px solid var(--rule)}
+.team b{font-weight:600}
+.team span{font-size:.85rem;color:var(--ink-2)}
+@media (max-width:900px){.team{grid-template-columns:repeat(2,minmax(0,1fr))}.team > div{border-top:1px solid var(--rule)}.team > div + div{border-left:0}}
+@media (max-width:520px){.team{grid-template-columns:1fr}}
+
+/* Clients */
+.clients{display:flex;flex-wrap:wrap;gap:8px}
+.clients span{font-size:.9rem;padding:8px 14px;border:1px solid var(--rule);background:var(--sheet);border-radius:2px}
+.deep .clients span{background:transparent;border-color:color-mix(in srgb,var(--deep-ink) 25%,transparent);color:var(--deep-ink)}
+
+/* Table */
+.tbl-wrap{overflow-x:auto;border:1px solid var(--rule);background:var(--sheet)}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:.94rem}
+th,td{text-align:left;padding:12px 16px;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font:500 .7rem var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);background:var(--paper)}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:.86rem;white-space:nowrap}
+td small{display:block;color:var(--ink-2);font-size:.84rem}
+tr:last-child td{border-bottom:0}
+.spec{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 20px;font-size:.93rem;margin:0}
+.spec dt{font:500 .72rem/1.9 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
+.spec dd{margin:0;font-variant-numeric:tabular-nums}
+
+/* Timeline */
+.timeline{display:grid;border-left:2px solid var(--rule);margin-left:4px}
+.tl{display:grid;grid-template-columns:110px minmax(0,1fr);gap:20px;padding:0 0 24px 24px;position:relative}
+.tl::before{content:"";position:absolute;left:-6px;top:6px;width:10px;height:10px;background:var(--brand);border-radius:50%}
+.tl .y{font:500 .85rem var(--mono)}
+.tl p{color:var(--ink-2)}
+@media (max-width:520px){.tl{grid-template-columns:1fr;gap:4px}}
+.model h3{display:flex;justify-content:space-between;gap:12px;align-items:baseline;flex-wrap:wrap}
+.model h3 span{font:500 .68rem var(--mono);letter-spacing:.1em;color:var(--ink-2);text-transform:uppercase}
+.cta-band{display:flex;flex-wrap:wrap;gap:24px;align-items:end;justify-content:space-between}
+.cta-band h2{max-width:22ch}
+
+/* Insights */
+.posts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+@media (max-width:900px){.posts{grid-template-columns:1fr}}
+.post{background:var(--sheet);border:1px solid var(--rule);padding:24px;display:grid;gap:12px;align-content:start;text-decoration:none;min-width:0;transition:border-color .2s,transform .2s}
+.post:hover{border-color:var(--brand);transform:translateY(-2px)}
+.post h3{font-size:1.25rem}
+.post p{color:var(--ink-2);font-size:.95rem}
+.post .meta{font:400 .74rem var(--mono);color:var(--ink-2);letter-spacing:.04em}
+.article{max-width:720px;margin-inline:auto;padding-block:clamp(36px,6vw,64px);display:grid;gap:22px}
+.article .back{font:500 .78rem var(--mono);letter-spacing:.08em;text-decoration:none;color:var(--brand-deep);text-transform:uppercase}
+.article .meta{font:400 .8rem var(--mono);color:var(--ink-2)}
+.article-body{display:grid;gap:1.05em;font-size:1.06rem;line-height:1.72}
+.article-body h2{font-size:1.4rem;margin-top:.8em}
+.article-body p,.article-body li{color:var(--ink)}
+.article-body ul{margin:0;padding-left:1.2em;display:grid;gap:6px}
+.share{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:16px 0;border-block:1px solid var(--rule)}
+.share .k{font:500 .72rem var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);margin-right:6px}
+.endcta{background:var(--deep);color:var(--deep-ink);padding:26px;display:grid;gap:12px}
+.endcta p{color:var(--deep-ink-2)}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(28px,5vw,64px);align-items:start}
+@media (max-width:860px){.contact-grid{grid-template-columns:1fr}}
+.cline{display:grid;gap:4px;padding:15px 0;border-bottom:1px solid var(--rule)}
+.cline .k{font:500 .7rem var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2)}
+.cline .v{font-size:1.02rem;font-weight:500;word-break:break-word}
+form{display:grid;gap:16px}
+.row2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:560px){.row2{grid-template-columns:1fr}}
+label{display:grid;gap:6px;font:500 .76rem var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
+input,select,textarea{font:400 1rem var(--body);color:var(--ink);background:var(--sheet);border:1px solid var(--rule);border-radius:2px;padding:12px 14px;width:100%}
+textarea{min-height:140px;resize:vertical}
+input:focus,select:focus,textarea:focus{border-color:var(--brand)}
+.out{background:var(--sheet);border:1px solid var(--rule);border-left:4px solid var(--cyan);padding:20px;display:grid;gap:12px}
+.out pre{margin:0;white-space:pre-wrap;font:400 .85rem/1.55 var(--mono);color:var(--ink);max-height:280px;overflow:auto}
+
+/* Footer */
+footer{background:var(--paper)}
+.stripe{height:20px;background:linear-gradient(var(--cyan) 0 30%,var(--brand) 30% 100%)}
+.tblock{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1.2fr) minmax(0,.9fr);border-left:1px solid var(--rule)}
+.tblock > div{padding:22px 20px;border-right:1px solid var(--rule);display:grid;gap:10px;align-content:start;min-width:0}
+.tblock .k{font:500 .68rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2)}
+.tblock a{text-decoration:none;color:var(--ink-2);font-size:.92rem}
+.tblock a:hover{color:var(--brand)}
+.tblock .links{display:grid;gap:6px}
+.dwg{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 14px;font:400 .78rem var(--mono);color:var(--ink-2)}
+.dwg b{font-weight:500;color:var(--ink)}
+.legal{border-top:1px solid var(--rule);padding-block:16px;font:400 .74rem var(--mono);color:var(--ink-2);display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+@media (max-width:860px){.tblock{grid-template-columns:repeat(2,minmax(0,1fr))}.tblock > div{border-bottom:1px solid var(--rule)}}
+@media (max-width:520px){.tblock{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<!-- Illustration library: clean line drawings of SS Trading's work -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-sar" viewBox="0 0 240 120">
+      <path class="il-w" d="M0 92 q10-4 20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0"/>
+      <path class="il-f" d="M30 66 H196 L222 50 L212 78 Q204 92 184 94 H52 Q36 92 30 80 Z"/>
+      <path class="il-d" d="M31 76 H213 L212 78 Q204 92 184 94 H52 Q36 92 31 80 Z"/>
+      <path class="il-s" d="M30 70 H204"/>
+      <path class="il-f" d="M74 66 V42 H134 L150 66 Z"/>
+      <path class="il-c" d="M82 48 H131 L140 60 H82 Z"/>
+      <path class="il-s" d="M104 42 V22 M96 28 H112"/>
+      <circle class="il-c" cx="104" cy="19" r="3"/>
+      <path class="il-s" d="M156 56 H200 M164 56 V66 M180 56 V66 M196 56 V64"/>
+      <path class="il-s" d="M40 60 h16 v6 h-16 z"/>
+    </symbol>
+    <symbol id="i-ferry" viewBox="0 0 240 120">
+      <path class="il-w" d="M0 92 q10-4 20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0"/>
+      <path class="il-f" d="M10 70 H214 L232 54 L226 82 Q218 94 198 96 H28 Q14 94 10 84 Z"/>
+      <path class="il-d" d="M11 80 H227 L226 82 Q218 94 198 96 H28 Q14 94 11 84 Z"/>
+      <rect class="il-f" x="28" y="50" width="176" height="20"/>
+      <path class="il-win" d="M36 60 H196"/>
+      <rect class="il-f" x="52" y="34" width="128" height="16"/>
+      <path class="il-win" d="M58 42 H174" style="stroke-width:5"/>
+      <rect class="il-f" x="146" y="20" width="34" height="14"/>
+      <path class="il-c" d="M150 24 H177 V30 H150 Z"/>
+      <rect class="il-f" x="78" y="18" width="14" height="16"/>
+      <rect class="il-a" x="78" y="22" width="14" height="4"/>
+    </symbol>
+    <symbol id="i-pontoon" viewBox="0 0 240 120">
+      <path class="il-w" d="M0 94 q10-4 20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0"/>
+      <path class="il-f" d="M24 68 H216 L224 76 V96 H16 V76 Z"/>
+      <rect class="il-d" x="16" y="86" width="208" height="10"/>
+      <rect class="il-f" x="64" y="54" width="40" height="14"/>
+      <rect class="il-f" x="70" y="40" width="22" height="14"/>
+      <path class="il-c" d="M74 44 H88 V50 H74 Z"/>
+      <path class="il-s" d="M94 46 L198 12" style="stroke-width:4"/>
+      <path class="il-s" d="M80 40 L198 12 M198 12 V44"/>
+      <rect class="il-a" x="186" y="44" width="24" height="14"/>
+      <path class="il-s" d="M140 62 v6 M156 62 v6 M150 62 h-16"/>
+    </symbol>
+    <symbol id="i-dredger" viewBox="0 0 240 120">
+      <path class="il-w" d="M0 92 q10-4 20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0"/>
+      <path class="il-s" d="M42 92 L0 82"/>
+      <circle class="il-c" cx="30" cy="89" r="5"/><circle class="il-c" cx="12" cy="85" r="5"/>
+      <path class="il-s" d="M52 18 V102 M64 26 V102" style="stroke-width:3.5"/>
+      <path class="il-f" d="M40 66 H182 V90 H40 Z"/>
+      <rect class="il-d" x="40" y="82" width="142" height="8"/>
+      <rect class="il-f" x="86" y="40" width="54" height="26"/>
+      <path class="il-c" d="M92 46 H134 V54 H92 Z"/>
+      <path class="il-s" d="M164 66 L186 32 L204 66"/>
+      <path class="il-s" d="M176 62 L226 100" style="stroke-width:4.5"/>
+      <path class="il-s" d="M186 32 L222 92"/>
+      <circle class="il-a" cx="228" cy="102" r="8"/>
+    </symbol>
+    <symbol id="i-jetty" viewBox="0 0 240 120">
+      <path class="il-w" d="M0 90 q10-4 20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0"/>
+      <path class="il-s" d="M24 60 V114 M52 60 V114 M80 60 V114 M108 60 V114" style="stroke-width:3"/>
+      <rect class="il-a" x="10" y="52" width="114" height="9"/>
+      <path class="il-s" d="M10 44 H124 M22 44 V52 M46 44 V52 M70 44 V52 M94 44 V52 M118 44 V52"/>
+      <path class="il-s" d="M122 58 L176 80" style="stroke-width:3.5"/>
+      <path class="il-s" d="M122 48 L176 70 M138 54 V64 M156 62 V72"/>
+      <path class="il-f" d="M164 78 H232 V94 H164 Z"/>
+      <rect class="il-d" x="164" y="88" width="68" height="6"/>
+      <path class="il-s" d="M222 70 v8 M214 72 h16"/>
+    </symbol>
+    <symbol id="i-carrier" viewBox="0 0 240 120">
+      <path class="il-w" d="M0 94 q10-4 20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0"/>
+      <path class="il-f" d="M8 66 H210 L232 48 L224 82 Q214 96 192 98 H28 Q12 94 8 82 Z"/>
+      <path class="il-d" d="M9 82 H225 L224 82 Q214 96 192 98 H28 Q12 94 9 84 Z"/>
+      <rect class="il-f" x="16" y="30" width="36" height="36"/>
+      <path class="il-c" d="M20 34 H48 V40 H20 Z"/>
+      <path class="il-s" d="M12 30 H56"/>
+      <rect class="il-f" x="56" y="34" width="12" height="32"/>
+      <rect class="il-a" x="56" y="40" width="12" height="5"/>
+      <rect class="il-f" x="78" y="56" width="30" height="10"/><rect class="il-f" x="114" y="56" width="30" height="10"/>
+      <rect class="il-f" x="150" y="56" width="30" height="10"/><rect class="il-f" x="186" y="56" width="22" height="10"/>
+      <path class="il-s" d="M111 56 V22 L140 40 M147 56 V22 L176 40" style="stroke-width:2.5"/>
+    </symbol>
+    <symbol id="i-pier" viewBox="0 0 240 120">
+      <path class="il-s" d="M0 100 H240"/>
+      <path class="il-s" d="M108 100 V116 M120 100 V116 M132 100 V116" style="stroke-dasharray:3 3"/>
+      <rect class="il-a" x="0" y="30" width="240" height="10"/>
+      <path class="il-s" d="M0 24 H240" style="stroke-dasharray:6 5"/>
+      <rect class="il-f" x="104" y="50" width="32" height="50"/>
+      <path class="il-f" d="M88 40 H152 L144 52 H96 Z"/>
+      <rect class="il-f" x="20" y="60" width="18" height="40"/><rect class="il-f" x="202" y="60" width="18" height="40"/>
+      <path class="il-s" d="M14 50 H44 L38 60 H20 Z M196 50 H226 L220 60 H202 Z"/>
+    </symbol>
+    <symbol id="i-bus" viewBox="0 0 240 120">
+      <path class="il-w" d="M0 90 q10-4 20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0"/>
+      <path class="il-f" d="M36 68 H188 L210 56 L202 80 Q194 90 176 92 H54 Q40 90 36 80 Z"/>
+      <path class="il-d" d="M37 78 H203 L202 80 Q194 90 176 92 H54 Q40 90 37 80 Z"/>
+      <path class="il-f" d="M56 68 V44 Q56 38 62 38 H160 Q170 38 176 46 L184 68 Z"/>
+      <path class="il-win" d="M64 52 H170" style="stroke-width:9;stroke-dasharray:14 5"/>
+      <path class="il-s" d="M110 38 V28 M102 30 H118"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#home" aria-label="SS Trading home">
+      <svg class="mark" viewBox="0 0 48 34" aria-hidden="true">
+        <path d="M6 18 C18 10 31 5 46 1 L44.5 6.5 C31 9 19 13 8 19.5 Z" fill="var(--logo-grey)"/>
+        <path d="M3 24 C17 16.5 31 12 46 10 L45 16 C31 17 18 20 5 25.5 Z" fill="var(--brand)"/>
+        <path d="M3 30 C17 24 31 20.5 46 19.5 L45 25.5 C31 25.5 18 27 5 31.5 Z" fill="var(--brand-deep)"/>
+      </svg>
+      <span><span class="word">SS<span>Trading</span></span><span class="brand-sub">Est. 2007 · Chattogram</span></span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">MENU</button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#build">Build with us</a>
+      <a href="#consulting">Consulting</a>
+      <a href="#supply">Supply</a>
+      <a href="#projects">Projects</a>
+      <a href="#insights">Insights</a>
+      <a href="#company">Company</a>
+      <a href="#contact">Contact</a>
+      <a href="#estimate" class="cta">Instant estimate</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ HOME ============ -->
+<div data-page="home">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-top">
+        <div>
+          <p class="eyebrow"><b>●</b> Shipbuilding project management · Marine supply · Bangladesh</p>
+          <h1>Ships built in Bangladesh, <em>delivered</em> to the world.</h1>
+          <p class="lede">Planning a new vessel? SS Trading manages newbuilds at Bangladeshi yards for shipowners, from specification to delivery. We are currently building an 81 m passenger ferry for Kenya Ports Authority and rescue boats for Kenya Maritime Authority.</p>
+          <div class="btns">
+            <a class="btn solid" href="#estimate">Estimate my newbuild <span class="arr">→</span></a>
+            <a class="btn" href="#contact">Talk to our team</a>
+          </div>
+        </div>
+        <form class="qcard" id="quick" novalidate>
+          <p class="eyebrow"><b>●</b> Instant newbuild estimate</p>
+          <h2>What would your vessel cost to build in Bangladesh?</h2>
+          <label for="q-type">Vessel type<select id="q-type"></select></label>
+          <div class="row2">
+            <label for="q-len">Length overall (m)<input id="q-len" type="number" min="8" max="200" step="0.5" inputmode="decimal"></label>
+            <label for="q-qty">Number of vessels<input id="q-qty" type="number" min="1" max="20" step="1" value="1" inputmode="numeric"></label>
+          </div>
+          <button class="btn solid" type="submit">Estimate cost <span class="arr">→</span></button>
+          <p class="note">Free and indicative. Refine the details on the next step, then send it to us for a firm quote.</p>
+        </form>
+      </div>
+
+      <figure class="yard" style="margin-inline:0;margin-bottom:0">
+        <span class="yard-tag">Build berth · Chattogram</span>
+        <svg id="yardSvg" viewBox="0 0 900 340" role="img" aria-label="Animated drawing of a ship being built: keel and frames, hull blocks lifted by gantry crane, superstructure and paint, launch, then sailing away to the right">
+          <defs>
+            <pattern id="ygrid" width="20" height="20" patternUnits="userSpaceOnUse"><path class="y-grid" d="M20 0H0V20" fill="none"/></pattern>
+            <clipPath id="hullClip"><path d="M0 0 H280 L300 -18 L294 24 Q282 62 252 70 H34 Q10 66 4 44 Z"/></clipPath>
+            <clipPath id="waterClip"><rect x="411" y="286" width="489" height="54"/></clipPath>
+          </defs>
+          <rect width="900" height="340" fill="url(#ygrid)"/>
+          <!-- land, quay, water -->
+          <rect class="y-land" x="0" y="270" width="410" height="70"/>
+          <path class="y-line" d="M0 270 H410 V340"/>
+          <rect class="y-water" x="411" y="292" width="489" height="48"/>
+          <g class="drift"><path class="y-wave" d="M411 300 q10 -3 20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0"/>
+            <path class="y-wave" d="M421 316 q10 -3 20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0"/></g>
+          <text class="y-txt" x="840" y="286">D.W.L.</text>
+          <!-- keel blocks -->
+          <g fill="var(--ink-2)"><rect x="92" y="262" width="16" height="8"/><rect x="152" y="262" width="16" height="8"/><rect x="212" y="262" width="16" height="8"/><rect x="272" y="262" width="16" height="8"/><rect x="326" y="262" width="16" height="8"/></g>
+          <!-- wake (behind ship) -->
+          <g id="wake" opacity="0" clip-path="url(#waterClip)">
+            <path class="y-wake" id="wk1" d=""/><path class="y-wake" id="wk2" d=""/><path class="y-wake" id="wk3" d=""/>
+          </g>
+          <!-- splash -->
+          <g id="splash" opacity="0" fill="none" stroke="var(--brand)" stroke-width="1.4">
+            <ellipse id="sp1" cx="590" cy="293" rx="10" ry="2"/><ellipse id="sp2" cx="590" cy="293" rx="10" ry="2"/>
+          </g>
+          <!-- ship -->
+          <g id="ship" transform="translate(440 248)">
+            <g id="smoke"><circle class="y-smoke" id="sm0" cx="106" cy="-48" r="0"/><circle class="y-smoke" id="sm1" cx="106" cy="-48" r="0"/><circle class="y-smoke" id="sm2" cx="106" cy="-48" r="0"/></g>
+            <g id="frames" clip-path="url(#hullClip)"></g>
+            <line id="keel" class="y-keel" x1="34" y1="70" x2="252" y2="70"/>
+            <g id="blocks"></g>
+            <g id="paint">
+              <path class="y-hullpaint" d="M0 0 H280 L300 -18 L294 24 Q282 62 252 70 H34 Q10 66 4 44 Z"/>
+              <g clip-path="url(#hullClip)"><rect class="y-anti" x="-10" y="47" width="320" height="30"/><rect class="y-boot" x="-10" y="43" width="320" height="4"/><rect fill="var(--cyan)" x="-10" y="8" width="320" height="3"/></g>
+              <text class="y-txt-w" x="214" y="28">SS TRADING</text>
+            </g>
+            <path id="outline" class="y-line" d="M0 0 H280 L300 -18 L294 24 Q282 62 252 70 H34 Q10 66 4 44 Z"/>
+            <g id="supers">
+              <g data-cx="55"><rect class="y-sup" x="18" y="-34" width="74" height="34"/><rect class="y-win" x="24" y="-26" width="62" height="5"/></g>
+              <g data-cx="55"><rect class="y-sup" x="28" y="-56" width="54" height="22"/><rect class="y-win" x="32" y="-50" width="46" height="7"/></g>
+              <g data-cx="106"><rect class="y-sup" x="98" y="-42" width="16" height="42"/><rect class="y-beam" x="98" y="-36" width="16" height="6"/></g>
+              <g data-cx="55"><path class="y-line" d="M55 -56 V-84 M45 -76 H65"/></g>
+              <g data-cx="205"><rect class="y-sup" x="130" y="-9" width="44" height="9"/><rect class="y-sup" x="180" y="-9" width="44" height="9"/><rect class="y-sup" x="230" y="-9" width="40" height="9"/></g>
+            </g>
+          </g>
+          <!-- gantry crane (in front of ship) -->
+          <g id="crane">
+            <rect class="y-steel" x="34" y="96" width="9" height="174"/>
+            <rect class="y-steel" x="379" y="96" width="9" height="174"/>
+            <path class="y-thin" d="M43 110 L60 96 M379 110 L362 96"/>
+            <rect class="y-beam" x="24" y="86" width="374" height="12"/>
+            <text class="y-txt-w" x="160" y="95">SST · GANTRY 200 T</text>
+            <line id="hook" class="y-thin" x1="200" y1="110" x2="200" y2="130" style="stroke:var(--ink)"/>
+            <rect id="trolley" class="y-steel" x="188" y="98" width="24" height="12"/>
+          </g>
+          <!-- baseline -->
+          <text class="y-txt" x="12" y="330">PROFILE · NOT TO SCALE</text>
+        </svg>
+        <figcaption class="yard-bar">
+          <ol class="stages" id="stages">
+            <li>Keel &amp; frames</li><li>Block erection</li><li>Outfitting &amp; paint</li><li>Launch</li><li class="on">Trials &amp; delivery</li>
+          </ol>
+          <span class="yard-cap" id="stageCap">Every stage supervised by our resident team</span>
+        </figcaption>
+      </figure>
+
+      <div class="facts">
+        <div class="fact"><span class="n">2007</span><span class="l">Established in Chattogram; now delivering in Bangladesh and Kenya</span></div>
+        <div class="fact"><span class="n">USD 6.9M</span><span class="l">Value of our six ongoing projects</span></div>
+        <div class="fact"><span class="n">1,500 t</span><span class="l">Largest heavy-duty pontoon we have built, with a 45 t crane</span></div>
+        <div class="fact"><span class="n">$200M+</span><span class="l">Export shipbuilding orders led by our Chairman</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="estimator" style="border-top:1px solid var(--rule);margin-top:clamp(32px,5vw,56px)">
+    <div class="wrap">
+      <div class="band-head">
+        <p class="eyebrow"><b>●</b> Newbuild cost estimator</p>
+        <h2>Estimate your newbuild in two minutes</h2>
+        <p class="lede">Give us as much as you know about the vessel. Leave a field blank and we use typical values for that type. The estimate updates as you type.</p>
+      </div>
+      <div class="est">
+        <form class="est-form" id="estForm" novalidate>
+          <fieldset>
+            <legend>Vessel</legend>
+            <div class="row2">
+              <label for="e-type">Vessel type<select id="e-type"></select></label>
+              <label for="e-qty">Number of vessels<input id="e-qty" type="number" min="1" max="20" step="1" value="1" inputmode="numeric"></label>
+            </div>
+            <div class="row2">
+              <label for="e-pax" data-show="pax">Passengers<input id="e-pax" type="number" min="0" step="10" inputmode="numeric"></label>
+              <label for="e-dwt" data-show="dwt">Deadweight (DWT)<input id="e-dwt" type="number" min="0" step="100" inputmode="numeric"></label>
+              <label for="e-bp" data-show="bp">Bollard pull (t)<input id="e-bp" type="number" min="5" step="1" inputmode="decimal"></label>
+              <label for="e-mat">Hull material<select id="e-mat"><option value="steel">Steel</option><option value="alu">Aluminium</option></select></label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Main dimensions</legend>
+            <div class="f4">
+              <label for="e-len">Length (m)<input id="e-len" type="number" min="8" max="200" step="0.5" inputmode="decimal"></label>
+              <label for="e-beam">Beam (m)<input id="e-beam" type="number" min="2" step="0.1" inputmode="decimal"></label>
+              <label for="e-depth">Depth (m)<input id="e-depth" type="number" min="0.8" step="0.1" inputmode="decimal"></label>
+              <label for="e-draft">Draft (m)<input id="e-draft" type="number" min="0.4" step="0.1" inputmode="decimal"></label>
+            </div>
+          </fieldset>
+          <fieldset data-show="powered">
+            <legend>Performance &amp; propulsion</legend>
+            <div class="f3">
+              <label for="e-speed" data-show="speed">Service speed (kn)<input id="e-speed" type="number" min="4" max="40" step="0.5" inputmode="decimal"></label>
+              <label for="e-power">Installed power (kW)<input id="e-power" type="number" min="20" step="10" inputmode="numeric"></label>
+              <label for="e-prop">Propulsion<select id="e-prop"><option value="shaft">Shaft &amp; propeller</option><option value="azimuth">Azimuth / ASD</option><option value="jet">Waterjet</option></select></label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Specification &amp; delivery</legend>
+            <div class="f3">
+              <label for="e-class">Classification<select id="e-class"><option value="iacs">IACS class (BV, DNV, LR, ABS…)</option><option value="other">Other recognised class</option><option value="local">Local flag rules only</option></select></label>
+              <label for="e-outfit">Outfit standard<select id="e-outfit"><option value="basic">Basic</option><option value="std" selected>Standard</option><option value="high">High specification</option></select></label>
+              <label for="e-deliv">Delivery<select id="e-deliv"><option value="domestic">In Bangladesh</option><option value="export">Export, at the yard</option><option value="delivered">Export, delivered to your port</option></select></label>
+            </div>
+            <div class="row2">
+              <label for="e-date">Target delivery<input id="e-date" type="month"></label>
+              <label for="e-flag">Flag / owner country<input id="e-flag" placeholder="e.g. Kenya"></label>
+            </div>
+            <label class="check" for="e-owner"><input id="e-owner" type="checkbox"> Owner will supply the main engines</label>
+          </fieldset>
+        </form>
+
+        <aside class="result" id="result" aria-live="polite">
+          <div style="display:grid;gap:6px">
+            <p class="eyebrow">Indicative price per vessel</p>
+            <div class="price" id="r-price">USD 1.9M to 2.7M</div>
+            <p class="sub" id="r-sub">Central estimate <b>USD 4.8M</b></p>
+            <p class="sub" id="r-series" hidden></p>
+          </div>
+          <p class="warnline" id="r-warn" hidden></p>
+          <div style="display:grid;gap:10px">
+            <p class="eyebrow">Where the money goes</p>
+            <div class="bar" id="r-bar" role="img" aria-label="Cost breakdown"></div>
+            <ul class="legendl" id="r-legend"></ul>
+          </div>
+          <div class="kfig">
+            <div><span>Steel weight</span><b id="k-steel">0 t</b></div>
+            <div><span>Displacement</span><b id="k-disp">0 t</b></div>
+            <div><span>Installed power</span><b id="k-power">0 kW</b></div>
+            <div><span>Build time</span><b id="k-time">0 months</b></div>
+          </div>
+          <div style="display:grid;gap:6px">
+            <p class="eyebrow">Typical payment milestones</p>
+            <table class="pay"><tbody id="r-pay"></tbody></table>
+          </div>
+          <div class="btns">
+            <button class="btn solid" type="button" id="r-quote">Request a firm quote <span class="arr">→</span></button>
+            <button class="btn" type="button" id="r-copy">Copy summary</button>
+          </div>
+          <p class="note">Indicative only, typically within ±20%. Based on typical 2026 costs at Bangladeshi yards. A firm price follows a review of your specification, class and delivery terms.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap now">
+      <div class="band-head" style="margin:0">
+        <span class="status">Now building</span>
+        <h2>Current shipbuilding work</h2>
+        <p class="lede">We represent shipyards and owners from procurement to delivery, covering supply chain, production, finance and quality control.</p>
+        <a class="more" href="#projects">All projects →</a>
+      </div>
+      <div class="grid-3">
+        <div class="card"><img class="photo" src="ferry-build.jpg" alt="Hull steelwork of the 81 m passenger ferry under construction at Karnafuly Shipbuilders" loading="lazy">
+          <div class="card-body"><span class="tag">Kenya Ports Authority</span><h3>81 m passenger ferry</h3><p>Construction work and project management at Karnafuly Shipbuilders.</p></div></div>
+        <div class="card"><img class="photo" src="sar-kma.jpg" alt="Orange search and rescue boat marked Kenya Maritime Authority SAR on a transport trailer" loading="lazy">
+          <div class="card-body"><span class="tag">Kenya Maritime Authority</span><h3>4 search &amp; rescue boats</h3><p>Construction and supply through Kenya Shipyards Ltd.</p></div></div>
+        <div class="card"><div class="illo"><svg viewBox="0 0 240 120" aria-hidden="true"><use href="#i-carrier"/></svg></div>
+          <div class="card-body"><span class="tag">Dutch shipowners</span><h3>4 × 12,500 DWT carriers</h3><p>Yard development at Karnafuly Shipbuilders for the combined carrier series.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="band-head">
+        <p class="eyebrow">From our yards and sites</p>
+        <h2>Real vessels, real projects</h2>
+      </div>
+      <div class="mosaic">
+        <figure><img src="sar-afloat.jpg" alt="Orange search and rescue boat moored alongside at the yard" loading="lazy"><figcaption><b>Shipbuilding · Kenya Maritime Authority</b>Search and rescue boat afloat at the yard before delivery</figcaption></figure>
+        <figure><img src="ferry-build.jpg" alt="Steel hull blocks of the 81 m ferry on the building berth" loading="lazy"><figcaption><b>Shipbuilding</b>81 m ferry hull blocks on the berth</figcaption></figure>
+        <figure><img src="kepz-gangway.jpg" alt="Green-decked gangway with white handrails leading to a floating pontoon on the river" loading="lazy"><figcaption><b>Marine works</b>Pontoon and gangway, Korean EPZ jetty</figcaption></figure>
+        <figure><img src="dredger-bera.jpg" alt="Red cutter suction dredger working on the river" loading="lazy"><figcaption><b>Dredging</b>Cutter suction dredger at Bera, Pabna</figcaption></figure>
+        <figure><img src="dredger-fleet.jpg" alt="SS Trading cutter suction dredger with workboat and tug on the river" loading="lazy"><figcaption><b>Fleet</b>Our dredger, workboat and support craft</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="band-head">
+        <p class="eyebrow">What we do</p>
+        <h2>Three ways we work with the maritime sector</h2>
+      </div>
+      <div class="grid-3">
+        <div class="panel service"><span class="tag">For owners &amp; shipyards</span><h3>Shipbuilding project management</h3><p>We act as the owner's team on vessels built in Bangladesh, and represent shipyards on procurement, production and delivery.</p><a class="more" href="#build">Build with us →</a></div>
+        <div class="panel service"><span class="tag">For ports, fleets &amp; contractors</span><h3>Pontoons, barges &amp; small vessels</h3><p>Heavy-duty pontoons, crane barges, rescue boats and workboats, built to your duty and delivered to site.</p><a class="more" href="#supply">Supply services →</a></div>
+        <div class="panel service"><span class="tag">For infrastructure clients</span><h3>Jetties, dredging &amp; marine works</h3><p>Passenger landing stations, oil jetty pontoons and dredging, delivered with our own fleet and our sister concern T.S. Dredging.</p><a class="more" href="#projects">Projects →</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band deep">
+    <div class="wrap why">
+      <div class="band-head" style="margin:0">
+        <p class="eyebrow">Why build in Bangladesh</p>
+        <h2>Competitive yards, real export history, and a partner who knows them</h2>
+        <p class="lede">Bangladesh has built and exported vessels for more than fifteen years. The opportunity for owners is real. The risk is choosing the wrong yard or the wrong contract. That is the part we manage.</p>
+        <div class="btns mt"><a class="btn solid" href="#contact">Request a yard shortlist <span class="arr">→</span></a></div>
+      </div>
+      <div class="why-items">
+        <div class="why-item"><span class="k">Cost</span><p>Steelwork and outfitting are labour-intensive, and Bangladeshi yards price them well below most East Asian and European builders for small and mid-size vessels.</p></div>
+        <div class="why-item"><span class="k">Track record</span><p>Bangladeshi yards have delivered to owners in Europe, Africa and Asia since 2008, under the supervision of international classification societies.</p></div>
+        <div class="why-item"><span class="k">Proof</span><p>Our own current work includes vessels for Kenyan public authorities and a carrier series for Dutch owners.</p></div>
+        <div class="why-item"><span class="k">Support</span><p>Government policy backs the sector, including Bangladesh Bank refinance schemes for shipbuilding.</p></div>
+        <div class="why-item"><span class="k">Our role</span><p>We sit on your side of the table: we match the yard to the vessel, secure the contract and payment terms, and keep a resident team on site until delivery.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="band-head">
+        <p class="eyebrow">How a newbuild runs with us</p>
+        <h2>From first enquiry to delivery, in seven stages</h2>
+      </div>
+      <ol class="steps">
+        <li><h3>Requirements</h3><p>Trade, flag, class, budget and delivery window.</p></li>
+        <li><h3>Specification</h3><p>Outline spec and arrangement with our naval architects.</p></li>
+        <li><h3>Yard match</h3><p>Shortlist, tender and compare suitable yards.</p></li>
+        <li><h3>Contract</h3><p>Terms, milestones, refund guarantee and finance.</p></li>
+        <li><h3>Approval</h3><p>Class plan approval and long-lead procurement.</p></li>
+        <li><h3>Supervision</h3><p>Resident site team, inspections and reporting.</p></li>
+        <li><h3>Delivery</h3><p>Sea trials, handover and warranty support.</p></li>
+      </ol>
+      <div class="btns mt"><a class="btn" href="#build">Full process &amp; vessel types <span class="arr">→</span></a></div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="band-head">
+        <p class="eyebrow">Clients &amp; partners</p>
+        <h2>Trusted by ports, navies, oil companies and shipyards</h2>
+      </div>
+      <div class="clients">
+        <span>Chattogram Port Authority</span><span>Bangladesh Navy</span><span>Chittagong Dry Dock Ltd</span><span>Karnafuly Shipbuilders Ltd</span><span>Karnafuly Drydock Ltd</span><span>Kenya Ports Authority</span><span>Kenya Shipyards Ltd</span><span>Kenya Maritime Authority</span><span>Jamuna Oil Company</span><span>Bangladesh Petroleum Corporation</span><span>Bangladesh Water Development Board</span><span>Korean EPZ</span><span>Chattogram City Corporation</span><span>BSRM</span><span>Summit</span><span>Italian-Thai Development</span><span>INSB Class</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="band-head">
+        <p class="eyebrow">Insights</p>
+        <h2>Notes for shipowners from the yard floor</h2>
+      </div>
+      <div class="posts" id="homePosts"></div>
+    </div>
+  </section>
+
+  <section class="band deep">
+    <div class="wrap cta-band">
+      <div class="band-head" style="margin:0">
+        <p class="eyebrow">Planning a vessel?</p>
+        <h2>Tell us what you need to build. We will tell you where and how.</h2>
+      </div>
+      <a class="btn solid" href="#contact">Start a project <span class="arr">→</span></a>
+    </div>
+  </section>
+</div>
+
+<!-- ============ BUILD WITH US ============ -->
+<div data-page="build" hidden>
+  <section class="sheet-head">
+    <div class="wrap">
+      <p class="eyebrow">Sheet 02 · <b>Build with us</b></p>
+      <h1>A newbuild in Bangladesh, managed from enquiry to delivery</h1>
+      <p class="lede">For shipowners, operators and public buyers who want the price advantage of a Bangladeshi yard without carrying the yard risk themselves. We bring the naval architecture, the local relationships and the contract discipline.</p>
+      <div class="btns"><a class="btn solid" href="#contact">Discuss your vessel <span class="arr">→</span></a></div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="band-head">
+        <p class="eyebrow">Vessel types</p>
+        <h2>What we build with Bangladeshi yards</h2>
+        <p class="lede">Small and mid-size steel vessels are where Bangladesh competes best. If your vessel is outside this list, ask us and we will give you a straight answer.</p>
+      </div>
+      <div class="grid-4">
+        <div class="card"><div class="illo"><svg viewBox="0 0 240 120" aria-hidden="true"><use href="#i-ferry"/></svg></div><div class="card-body"><h3>Ferries</h3><p>Passenger and ro-ro ferries for river, coastal and port routes.</p></div></div>
+        <div class="card"><div class="illo"><svg viewBox="0 0 240 120" aria-hidden="true"><use href="#i-sar"/></svg></div><div class="card-body"><h3>Rescue &amp; patrol craft</h3><p>Search and rescue, patrol and survey boats for public agencies.</p></div></div>
+        <div class="card"><div class="illo"><svg viewBox="0 0 240 120" aria-hidden="true"><use href="#i-carrier"/></svg></div><div class="card-body"><h3>Cargo ships</h3><p>Coasters, general cargo and combined carriers for short-sea trades.</p></div></div>
+        <div class="card"><div class="illo"><svg viewBox="0 0 240 120" aria-hidden="true"><use href="#i-pontoon"/></svg></div><div class="card-body"><h3>Pontoons &amp; barges</h3><p>Deck and crane barges, heavy-duty and landing pontoons.</p></div></div>
+        <div class="card"><div class="illo"><svg viewBox="0 0 240 120" aria-hidden="true"><use href="#i-dredger"/></svg></div><div class="card-body"><h3>Dredgers</h3><p>Cutter suction dredgers and dredging support craft.</p></div></div>
+        <div class="card"><div class="illo"><svg viewBox="0 0 240 120" aria-hidden="true"><use href="#i-bus"/></svg></div><div class="card-body"><h3>Water buses</h3><p>Commuter and harbour passenger boats.</p></div></div>
+        <div class="card"><div class="illo"><svg viewBox="0 0 240 120" aria-hidden="true"><use href="#i-pontoon"/></svg></div><div class="card-body"><h3>Tugs &amp; workboats</h3><p>Harbour, river and coastal tugs; mooring and line-handling boats.</p></div></div>
+        <div class="card"><div class="illo"><svg viewBox="0 0 240 120" aria-hidden="true"><use href="#i-carrier"/></svg></div><div class="card-body"><h3>Tankers</h3><p>Inland and coastal oil, product and bunker tankers.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="band-head">
+        <p class="eyebrow">The process</p>
+        <h2>Seven stages, one accountable team</h2>
+      </div>
+      <ol class="steps big">
+        <li><h3>Enquiry &amp; requirements</h3><p>We start with your operating profile: trade route, cargo or service, flag, class society, budget and delivery window. You get an early view on feasibility and an indicative price band.</p></li>
+        <li><h3>Concept &amp; specification</h3><p>Our naval architects prepare or review the outline specification, general arrangement and main equipment list, so that every yard quotes against the same vessel.</p></li>
+        <li><h3>Yard matching &amp; tender</h3><p>We shortlist Bangladeshi yards with the right berth, experience and financial standing, run the quotation round and compare price, schedule and capability side by side.</p></li>
+        <li><h3>Contract, finance &amp; guarantees</h3><p>We negotiate the shipbuilding contract with you: payment milestones, liquidated damages, the maker's list, and payment security such as bank refund guarantees, all settled before steel is cut.</p></li>
+        <li><h3>Design approval &amp; procurement</h3><p>We follow class plan approval, check the yard's working drawings and manage the supply chain for long-lead items such as main engines, gearboxes and deck machinery.</p></li>
+        <li><h3>Construction supervision</h3><p>A resident site team inspects steelwork, welding, coating and outfitting, witnesses tests with class, and sends you regular progress and milestone reports with photographs.</p></li>
+        <li><h3>Trials, delivery &amp; warranty</h3><p>We witness sea trials, check the delivery documentation and certificates, manage handover to your crew and stay on call through the guarantee period.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="band-head">
+        <p class="eyebrow">Engagement models</p>
+        <h2>Choose how much of the build you hand to us</h2>
+      </div>
+      <div class="grid-3">
+        <div class="panel model"><h3>Turnkey coordination <span>Full scope</span></h3><p>We find the yard and manage the entire build on your behalf. Best for owners new to Bangladesh.</p></div>
+        <div class="panel model"><h3>Owner's representative <span>Stages 4 to 7</span></h3><p>You have chosen a yard. We protect your interests on contract, quality and schedule through to delivery.</p></div>
+        <div class="panel model"><h3>Technical review <span>Fixed scope</span></h3><p>A specification, contract or plan review, or a yard capability assessment, delivered as a single report.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band deep">
+    <div class="wrap cta-band">
+      <div class="band-head" style="margin:0"><p class="eyebrow">Next step</p><h2>Send us an outline of your vessel and we will come back with yard options</h2></div>
+      <a class="btn solid" href="#contact">Send an enquiry <span class="arr">→</span></a>
+    </div>
+  </section>
+</div>
+
+<!-- ============ CONSULTING ============ -->
+<div data-page="consulting" hidden>
+  <section class="sheet-head">
+    <div class="wrap">
+      <p class="eyebrow">Sheet 03 · <b>Consulting</b></p>
+      <h1>Shipbuilding project management and consulting</h1>
+      <p class="lede">From new shipbuilding procurement to project delivery: supply chain management, production management, financial management, quality control supervision and handover. We do this today for shipyards in Bangladesh and Kenya.</p>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="band-head">
+        <span class="status">Project management representation</span>
+        <h2>Who we represent today</h2>
+      </div>
+      <div class="grid-3">
+        <div class="panel"><span class="tag">Chattogram, Bangladesh</span><h3>Karnafuly Shipbuilders Ltd</h3><p>Export-oriented shipbuilding consultancy, including the 81 m ferry for Kenya Ports Authority and yard development for the 12,500 DWT carrier series.</p></div>
+        <div class="panel"><span class="tag">Chattogram, Bangladesh</span><h3>Karnafuly Drydock Ltd</h3><p>Project management representation for newbuild procurement through delivery.</p></div>
+        <div class="panel"><span class="tag">Mombasa, Kenya</span><h3>Kenya Shipyards Ltd</h3><p>Shipbuilding and maritime consultancy, including the search and rescue boats for Kenya Maritime Authority.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="band-head"><p class="eyebrow">Services</p><h2>What we do for each client</h2></div>
+      <div class="grid-3">
+        <div class="panel"><span class="tag">For shipyards</span><h3>Win and deliver more orders</h3>
+          <ul class="list"><li>International business development and owner introductions</li><li>Tender responses, technical proposals and pricing</li><li>Supply chain and procurement management</li><li>Production planning and cost control</li><li>Quality control and class liaison</li><li>Yard development and capacity planning</li></ul></div>
+        <div class="panel"><span class="tag">For shipowners</span><h3>Build with confidence</h3>
+          <ul class="list"><li>Specification and general arrangement review</li><li>Yard selection and tender management</li><li>Shipbuilding contract negotiation</li><li>Plan approval follow-up and procurement</li><li>Resident site supervision and reporting</li><li>Sea trials, delivery and warranty support</li></ul>
+          <a class="more" href="#build">The full newbuild process →</a></div>
+        <div class="panel"><span class="tag">For investors &amp; government</span><h3>Decide on solid ground</h3>
+          <ul class="list"><li>Shipyard capability and due diligence assessments</li><li>Feasibility studies for vessels, yards and ports</li><li>Local partner support for foreign EPC and yard groups</li><li>Market entry advice for Bangladesh's maritime sector</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="band-head"><p class="eyebrow">How we engage</p><h2>Simple terms, tied to results</h2></div>
+      <div class="grid-3">
+        <div class="panel model"><h3>Project mandate <span>Per vessel</span></h3><p>A defined scope on a single newbuild, from procurement to delivery.</p></div>
+        <div class="panel model"><h3>Retainer <span>Monthly</span></h3><p>An embedded team for yards running several projects or building an export pipeline.</p></div>
+        <div class="panel model"><h3>Fixed-scope study <span>One report</span></h3><p>An assessment, feasibility study or document with a fixed fee and date.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band deep">
+    <div class="wrap cta-band">
+      <div class="band-head" style="margin:0"><p class="eyebrow">Shipyards &amp; owners</p><h2>Put our project team on your next build</h2></div>
+      <a class="btn solid" href="#contact">Talk to us <span class="arr">→</span></a>
+    </div>
+  </section>
+</div>
+
+<!-- ============ SUPPLY ============ -->
+<div data-page="supply" hidden>
+  <section class="sheet-head">
+    <div class="wrap">
+      <p class="eyebrow">Sheet 04 · <b>Supply</b></p>
+      <h1>Pontoons, barges and small vessels, built and delivered</h1>
+      <p class="lede">SS Trading began in 2007 supplying tugboats, barges and coasters to Bangladesh's infrastructure sector. Today we build and supply heavy-duty pontoons, crane barges, rescue boats and jetty systems for ports, oil companies, contractors and public agencies.</p>
+      <div class="btns"><a class="btn solid" href="#contact">Request a quotation <span class="arr">→</span></a></div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="grid-3">
+        <div class="card"><img class="photo" src="pontoon-hull.jpg" alt="Heavy-duty steel pontoon with red bottom paint alongside the river bank" loading="lazy"><div class="card-body"><span class="tag">Built</span><h3>Heavy-duty &amp; crane pontoons</h3><p>2 × 1,000 t pontoons for the OSJI Kanchpur Bridge project, a 550 t pontoon for Max Infrastructure, and a 1,500 t crane-mounted pontoon with a 45 t crane for PHP Ship-breaking &amp; Recycling.</p></div></div>
+        <div class="card"><img class="photo" src="sar-hull.jpg" alt="Orange rescue boat hull on stands in the building hall" loading="lazy"><div class="card-body"><span class="tag">Building</span><h3>Search &amp; rescue boats</h3><p>Four rescue boats for Kenya Maritime Authority, built and supplied through Kenya Shipyards Ltd.</p></div></div>
+        <div class="card"><img class="photo" src="kepz-gangway-2.jpg" alt="Gangway with white handrails leading to a floating passenger pontoon" loading="lazy"><div class="card-body"><span class="tag">Built &amp; building</span><h3>Pontoon jetties &amp; gangways</h3><p>Passenger landing stations at Sadarghat and Patenga, the Korean EPZ passenger jetty, and the Jamuna Oil pontoon and pipeline jetty.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="band-head"><p class="eyebrow">What we supply</p><h2>From a single workboat to a full jetty system</h2></div>
+      <div class="grid-2">
+        <div class="panel service"><span class="tag">Vessels</span><h3>Small vessels &amp; craft</h3><p>Rescue and patrol boats, workboats, water buses, tugs and barges, built at partner yards to your duty and class, or sourced second-hand and inspected.</p></div>
+        <div class="panel service"><span class="tag">Floating structures</span><h3>Pontoons &amp; crane barges</h3><p>Heavy-duty deck pontoons from hundreds to thousands of tonnes, crane-mounted pontoons and landing pontoons, with towage to site.</p></div>
+        <div class="panel service"><span class="tag">Marine works</span><h3>Jetties, causeways &amp; gangways</h3><p>Steel causeways, gangways, pile driving and pontoon installation for passenger and oil terminals.</p></div>
+        <div class="panel service"><span class="tag">Logistics</span><h3>Project logistics &amp; heavy lift</h3><p>Mobile cranes, barges, excavators and generators for fast-track projects, with crews who know Chattogram's port and rivers.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap grid-2" style="align-items:start">
+      <div class="band-head" style="margin:0">
+        <p class="eyebrow">Procurement-ready</p>
+        <h2>Enlisted and documented for public tenders</h2>
+        <p class="lede">We are enlisted with the Bangladesh Navy's Naval Stores Depot and with BEPZA, and hold the registrations public buyers ask for.</p>
+      </div>
+      <div class="panel">
+        <dl class="spec">
+          <dt>Firm type</dt><dd>Registered partnership firm, RJSC</dd>
+          <dt>Incorporated</dt><dd>2007, certificate CHP 2310/2016</dd>
+          <dt>Enlistments</dt><dd>Naval Stores Depot (NSD), Chittagong; BEPZA</dd>
+          <dt>TIN</dt><dd>436846385996 / Circle-4</dd>
+          <dt>Trade licence</dt><dd>Current, available on request</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="band deep">
+    <div class="wrap cta-band">
+      <div class="band-head" style="margin:0"><p class="eyebrow">Supply enquiry</p><h2>Send us the duty, the specification and the delivery date</h2></div>
+      <a class="btn solid" href="#contact">Request a quotation <span class="arr">→</span></a>
+    </div>
+  </section>
+</div>
+
+<!-- ============ PROJECTS ============ -->
+<div data-page="projects" hidden>
+  <section class="sheet-head">
+    <div class="wrap">
+      <p class="eyebrow">Sheet 05 · <b>Projects</b></p>
+      <h1>Projects, fleet and the work behind our name</h1>
+      <p class="lede">Shipbuilding, marine works, dredging and civil projects across Bangladesh and Kenya, for port authorities, the navy, oil companies and international contractors.</p>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="band-head"><span class="status">Ongoing</span><h2>Six projects in progress</h2></div>
+      <div class="grid-3">
+        <div class="card"><img class="photo" src="ferry-build.jpg" alt="Hull blocks of the 81 m ferry under construction" loading="lazy"><div class="card-body"><span class="tag">Shipbuilding</span><h3>81 m passenger ferry</h3><p>Karnafuly Shipbuilders Ltd · end user Kenya Ports Authority</p><span class="val">USD 0.82M</span></div></div>
+        <div class="card"><img class="photo" src="sar-afloat.jpg" alt="Search and rescue boat afloat at the yard" loading="lazy"><div class="card-body"><span class="tag">Shipbuilding</span><h3>4 search &amp; rescue boats</h3><p>Kenya Shipyards Ltd · end user Kenya Maritime Authority</p><span class="val">USD 1.41M</span></div></div>
+        <div class="card"><div class="illo"><svg viewBox="0 0 240 120" aria-hidden="true"><use href="#i-carrier"/></svg></div><div class="card-body"><span class="tag">Yard development</span><h3>4 × 12,500 DWT combined carriers</h3><p>Karnafuly Shipbuilders Ltd · end users Dutch shipping companies</p><span class="val">USD 2.05M</span></div></div>
+        <div class="card"><img class="photo" src="jamuna-team.jpg" alt="Jamuna Oil officials and the SS Trading team inspecting pontoon construction" loading="lazy"><div class="card-body"><span class="tag">Marine works</span><h3>Jamuna Oil pontoon jetty</h3><p>Pontoon, landing platform, gangway and pipelines, DOJ-3 to LJ-3, East Patenga · Jamuna Oil Co. (BPC), in JV with Chittagong Dry Dock Ltd (Bangladesh Navy)</p><span class="val">USD 1.98M</span></div></div>
+        <div class="card"><img class="photo" src="dredger-bera.jpg" alt="Red cutter suction dredger at Bera, Pabna" loading="lazy"><div class="card-body"><span class="tag">Dredging</span><h3>Dredging at Bera, Pabna</h3><p>26-inch cutter suction dredger · BTC, end user Bangladesh Water Development Board</p><span class="val">USD 0.61M</span></div></div>
+        <div class="card"><img class="photo" src="waterbus-terminal.jpg" alt="Chittagong Port Authority Water Bus Terminal with passengers boarding" loading="lazy"><div class="card-body"><span class="tag">Operations</span><h3>Water Bus Transport Project</h3><p>Own-funded operation with Chittagong Port Authority and Chittagong Dry Dock Ltd</p><span class="val">Own investment</span></div></div>
+      </div>
+      <p class="note" style="margin-top:14px">Contract values are approximate US dollar equivalents.</p>
+      <p class="eyebrow mt" style="margin-bottom:12px">On site now</p>
+      <div class="strip">
+        <figure><img class="photo" src="ferry-blocks.jpg" alt="Ferry hull blocks and frames on the building berth" loading="lazy"><figcaption>81 m ferry, block erection</figcaption></figure>
+        <figure><img class="photo" src="jetty-piles.jpg" alt="Steel piles driven in the river for the Jamuna Oil jetty" loading="lazy"><figcaption>Jamuna Oil jetty, piling in the river</figcaption></figure>
+        <figure><img class="photo" src="pile-driving.jpg" alt="Workers handling steel pipe piles at the jetty site" loading="lazy"><figcaption>Jamuna Oil jetty, pile driving at Patenga</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="band-head"><p class="eyebrow">Completed</p><h2>Selected completed works</h2></div>
+      <div class="strip" style="margin-bottom:24px">
+        <figure><img class="photo" src="patenga-gangway.jpg" alt="Steel gangway to a passenger ship at the Patenga landing station" loading="lazy"><figcaption>Passenger landing station, Patenga</figcaption></figure>
+        <figure><img class="photo" src="kepz-gangway-2.jpg" alt="Pontoon and gangway at the Korean EPZ passenger jetty" loading="lazy"><figcaption>Pontoon &amp; gangway, Korean EPZ jetty</figcaption></figure>
+        <figure><img class="photo" src="crane-barge.jpg" alt="Crane-mounted barge alongside" loading="lazy"><figcaption>45 t crane-mounted barge</figcaption></figure>
+        <figure><img class="photo" src="pontoon-hull.jpg" alt="Heavy-duty steel pontoon" loading="lazy"><figcaption>Heavy-duty pontoon</figcaption></figure>
+        <figure><img class="photo" src="sadarghat-causeway.jpg" alt="Steel causeway structure under construction at the Sadarghat landing station" loading="lazy"><figcaption>Steel causeway, Sadarghat landing station</figcaption></figure>
+        <figure><img class="photo" src="patenga-terminal.jpg" alt="Patenga passenger terminal apron with a ship alongside" loading="lazy"><figcaption>Passenger terminal apron, Patenga</figcaption></figure>
+      </div>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>Project</th><th>Client</th></tr></thead>
+          <tbody>
+            <tr><td>Passenger ship landing station with steel causeway, gangway and pontoon, Sadarghat</td><td>Chittagong Dry Dock Ltd &amp; Chittagong Port Authority</td></tr>
+            <tr><td>Passenger ship landing station with steel causeway, gangway and pontoon, Patenga</td><td>Chittagong Dry Dock Ltd &amp; Chittagong Port Authority</td></tr>
+            <tr><td>Pontoon and gangway, Korean EPZ passenger jetty</td><td>Korean EPZ</td></tr>
+            <tr><td>Heavy-duty pontoons: 2 × 1,000 t (Kanchpur Bridge), 1 × 550 t, 1 × 1,500 t with 45 t crane<small>Also a 45 t crane-mounted barge</small></td><td>OSJI · Max Infrastructure · PHP Ship-breaking &amp; Recycling</td></tr>
+            <tr><td>Dredging, dyke construction and earth filling, Bay Terminal low land</td><td>Chittagong Dry Dock Ltd &amp; Chittagong Port Authority</td></tr>
+            <tr><td>Pile cap and pier head, Dhaka Mass Rapid Transit</td><td>Italian-Thai Development Corporation</td></tr>
+            <tr><td>Precast parapet erection and cast-in-situ cable trough</td><td>Italian-Thai Development Corporation</td></tr>
+            <tr><td>Improvement of Bijoy Nagar Road, Ward 41 (6 km drain, 3 km road), JICA-funded</td><td>Chattogram City Corporation</td></tr>
+            <tr><td>United Power Plant development</td><td>United Tank Terminal Ltd</td></tr>
+            <tr><td>Steel roof frame over the CPA high-tech swimming pool gallery</td><td>Chittagong Port Authority</td></tr>
+            <tr><td>6-storey composite industrial building, CEPZ</td><td>Section Seven Ltd</td></tr>
+            <tr><td>Eviction works, Laldiar Char (completed 3 March 2021)</td><td>Chittagong Port Authority</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="band-head"><p class="eyebrow">Sister concern · T.S. Dredging &amp; Heavy Engineering Ltd</p><h2>Dredging and land filling</h2></div>
+      <div class="strip" style="margin-bottom:24px">
+        <figure><img class="photo" src="csd-dredger.jpg" alt="Cutter suction dredger with spud poles on the river" loading="lazy"><figcaption>Cutter suction dredger on site</figcaption></figure>
+        <figure><img class="photo" src="dredge-discharge.jpg" alt="Dredged sand discharging from a pipeline onto reclaimed land" loading="lazy"><figcaption>Land filling by pipeline discharge</figcaption></figure>
+        <figure><img class="photo" src="dredger-fleet.jpg" alt="Dredger with workboat and tug" loading="lazy"><figcaption>Dredger with workboat and support craft</figcaption></figure>
+      </div>
+      <div class="grid-2">
+        <div class="panel">
+          <h3>Capital dredging of Karnafuli river khals</h3>
+          <p>Surveyed by E-Engineering Ltd &amp; Chittagong Port Authority.</p>
+          <div class="tbl-wrap" style="border:0"><table style="min-width:0">
+            <thead><tr><th>Khal</th><th class="num">Volume (m³)</th></tr></thead>
+            <tbody><tr><td>Fisheries Khal</td><td class="num">22,584.58</td></tr><tr><td>Chaktai Khal</td><td class="num">17,186.47</td></tr><tr><td>Jobayer Khal</td><td class="num">14,444.61</td></tr><tr><td>Loitta Khal</td><td class="num">11,137.48</td></tr><tr><td>BFDC Khal</td><td class="num">11,134.07</td></tr><tr><td><b>Total</b></td><td class="num"><b>76,487.21</b></td></tr></tbody>
+          </table></div>
+        </div>
+        <div class="panel">
+          <h3>Major dredging and filling works</h3>
+          <dl class="spec">
+            <dt>Matarbari</dt><dd>Land filling 180,000 m³ and channel dredging 80,000 m³, Matarbari Ultra Super Critical Power Plant (2018)</dd>
+            <dt>Cox's Bazar</dt><dd>Dredging and land filling at Cox's Bazar Airport</dd>
+            <dt>Jamuna</dt><dd>Dredging for embankment protection on the River Jamuna</dd>
+            <dt>Bera, Pabna</dt><dd>Ongoing dredging with a 26-inch cutter suction dredger</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="band-head"><p class="eyebrow">Fleet &amp; equipment</p><h2>Owned and operated</h2></div>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>Equipment</th><th>Detail</th><th class="num">Quantity</th></tr></thead>
+          <tbody>
+            <tr><td>Cutter suction dredger 20"</td><td>With workboat, house boat, floaters and pipe</td><td class="num">1 set</td></tr>
+            <tr><td>Cutter suction dredger 18"</td><td>With workboat, house boat, floaters and pipe</td><td class="num">1 set</td></tr>
+            <tr><td>Suction dredger</td><td>With pipes</td><td class="num">2 sets</td></tr>
+            <tr><td>Barges</td><td>Various sizes</td><td class="num">5</td></tr>
+            <tr><td>Bulkheads</td><td>Various capacities</td><td class="num">4 sets</td></tr>
+            <tr><td>Mobile cranes</td><td>SWL 19 MT, 18 m boom</td><td class="num">6</td></tr>
+            <tr><td>Generators</td><td>50 to 625 kVA</td><td class="num">12</td></tr>
+            <tr><td>Excavators · pay loaders · dump trucks</td><td>4 of each</td><td class="num">12</td></tr>
+            <tr><td>Road rollers (10 t) · soil compactors</td><td>2 of each</td><td class="num">4</td></tr>
+            <tr><td>Vibro hammer · theodolites</td><td>Piling and survey</td><td class="num">1 · 2 sets</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="grid-2 mt">
+        <div class="card"><div class="illo"><svg viewBox="0 0 240 120" aria-hidden="true"><use href="#i-dredger"/></svg></div><div class="card-body"><span class="tag">Specification</span><h3>18" cutter suction dredger</h3>
+          <dl class="spec"><dt>LOA</dt><dd>22.78 m</dd><dt>Beam</dt><dd>8.25 m</dd><dt>Draft</dt><dd>1.40 m</dd><dt>Main engine</dt><dd>1 × CAT 3512, 1,200 HP at 1,300 rpm</dd><dt>Hydraulics</dt><dd>1 × CAT 600 HP</dd><dt>Dredge pump</dt><dd>450 DOD, 400 m³/h</dd><dt>Pipeline</dt><dd>2 km HDPE and steel, with hoses and floaters</dd></dl></div></div>
+        <div class="card"><div class="illo"><svg viewBox="0 0 240 120" aria-hidden="true"><use href="#i-pontoon"/></svg></div><div class="card-body"><span class="tag">Specification</span><h3>Workboat</h3>
+          <dl class="spec"><dt>LOA</dt><dd>14.50 m</dd><dt>Beam</dt><dd>5.25 m</dd><dt>Draft</dt><dd>0.65 m</dd><dt>Main engine</dt><dd>1 × 700 HP, fixed pitch propeller</dd><dt>Crane</dt><dd>1 × 5 t hydraulic</dd><dt>Genset</dt><dd>1 × 30 kVA diesel</dd></dl></div></div>
+      </div>
+      <p class="note mt">Work completion certificates from Chittagong Dry Dock Ltd, Chittagong Port Authority and other clients are available on request with our full company profile.</p>
+    </div>
+  </section>
+</div>
+
+<!-- ============ INSIGHTS ============ -->
+<div data-page="insights" hidden>
+  <section class="sheet-head">
+    <div class="wrap">
+      <p class="eyebrow">Sheet 06 · <b>Insights</b></p>
+      <h1>Insights on shipbuilding in Bangladesh</h1>
+      <p class="lede">Practical notes for shipowners, shipyards and buyers of marine equipment, from the team that manages builds at Bangladeshi and Kenyan yards.</p>
+    </div>
+  </section>
+  <section class="band">
+    <div class="wrap"><div class="posts" id="allPosts"></div></div>
+  </section>
+</div>
+
+<!-- ============ ARTICLE ============ -->
+<div data-page="article" hidden>
+  <div class="wrap"><article class="article" id="artView"></article></div>
+</div>
+
+<!-- ============ COMPANY ============ -->
+<div data-page="company" hidden>
+  <section class="sheet-head">
+    <div class="wrap">
+      <p class="eyebrow">Sheet 07 · <b>Company</b></p>
+      <h1>A Chattogram maritime firm, built over two generations</h1>
+      <p class="lede">S.S. Trading started in 2007 as a logistics service provider to Bangladesh's infrastructure sector. Today it brings naval architecture, marine engineering and export shipbuilding experience to owners and yards at home and abroad.</p>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="band-head"><p class="eyebrow">Management</p><h2>The people you will work with</h2></div>
+      <div class="grid-3">
+        <div class="panel person"><div class="mono">MS</div><div>
+          <h3>Engr. Md. Sakhawat Hossain</h3><div class="role">Chairman</div>
+          <p>A founding figure of Bangladesh's export shipbuilding sector, with 46 years in the maritime industry.</p>
+          <ul class="list"><li>MEO Class-1 (UK)</li><li>Founder, Western Marine Shipyard Ltd</li><li>Led more than USD 200 million in export shipbuilding orders</li><li>Member, Shipbuilding Policy Committee, Bangladesh Bank</li></ul>
+        </div></div>
+        <div class="panel person"><div class="mono">SH</div><div>
+          <h3>Md. Sabbab Hossain</h3><div class="role">Managing Partner</div>
+          <p>Naval architect experienced in shipbuilding business development, finance, foreign newbuild projects and dredger operations.</p>
+          <ul class="list"><li>MEng Ship Science with Engineering Management, University of Southampton</li><li>Chairman &amp; MD, T.S. Dredging &amp; Heavy Engineering Ltd</li><li>Member, Japan Bangladesh Chamber of Commerce and Industry</li></ul>
+        </div></div>
+        <div class="panel person"><div class="mono">WH</div><div>
+          <h3>Md. Wais Hossain</h3><div class="role">Director</div>
+          <p>Mechanical engineer focused on international shipbuilding business and owner relationships.</p>
+          <ul class="list"><li>MEng Mechanical Engineering, University of Southampton</li><li>Head of International Business Development, Karnafuly Shipbuilders</li></ul>
+        </div></div>
+      </div>
+      <div class="strip mt" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
+        <figure><img class="photo" src="cddl-signing.jpg" alt="Contract signing with Chittagong Dry Dock Ltd officials" loading="lazy"><figcaption>Contract signing with Chittagong Dry Dock Ltd for the Jamuna Oil jetty</figcaption></figure>
+        <figure><img class="photo" src="navy-visit.jpg" alt="SS Trading management with Bangladesh Navy officers" loading="lazy"><figcaption>With Bangladesh Navy officers, Chittagong Dry Dock Ltd</figcaption></figure>
+        <figure><img class="photo" src="navy-meeting.jpg" alt="Exchange of signed documents with naval officers" loading="lazy"><figcaption>Agreement exchange with naval partners</figcaption></figure>
+        <figure><img class="photo" src="contract-signing.jpg" alt="SS Trading management at a contract signing" loading="lazy"><figcaption>Contract signing with a client</figcaption></figure>
+      </div>
+      <div class="team mt">
+        <div><b>Engr. Anwar Rana</b><span>Technical Director</span></div>
+        <div><b>Riyadul Alam Chowdhury</b><span>GM, Operations</span></div>
+        <div><b>Mohammad Monir Uddin</b><span>GM, Finance &amp; Accounts · M.Com, CA (part qualified)</span></div>
+        <div><b>Md. Fahad Hossain</b><span>Manager, Accounts &amp; Finance · CA (part qualified), LLB</span></div>
+        <div><b>Mizanur Rahman</b><span>Manager, Administration</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap grid-2" style="align-items:start;gap:clamp(28px,5vw,64px)">
+      <div style="display:grid;gap:28px">
+        <div class="band-head" style="margin:0"><p class="eyebrow">History</p><h2>From supply to shipbuilding</h2></div>
+        <div class="timeline">
+          <div class="tl"><span class="y">10 Jul 2007</span><p>S.S. Trading founded in Chattogram as a partnership firm, supplying LP gas, tugboats, barges and coasters.</p></div>
+          <div class="tl"><span class="y">2010s</span><p>Diversifies into civil works, jetty construction and infrastructure development for CPA, Chittagong Dry Dock and international contractors.</p></div>
+          <div class="tl"><span class="y">4 Aug 2016</span><p>T.S. Dredging &amp; Heavy Engineering Ltd founded to take on construction dredging with its own fleet.</p></div>
+          <div class="tl"><span class="y">Today</span><p>Shipbuilding project management for yards in Bangladesh and Kenya, vessel and pontoon supply, and marine works.</p></div>
+        </div>
+      </div>
+      <div class="panel">
+        <span class="tag">Work force</span>
+        <div class="tbl-wrap" style="border:0"><table style="min-width:0">
+          <tbody>
+            <tr><td>Graduate engineers (civil &amp; mechanical)</td><td class="num">6</td></tr>
+            <tr><td>Diploma engineers</td><td class="num">5</td></tr>
+            <tr><td>Office executives</td><td class="num">37</td></tr>
+            <tr><td>Supervisors &amp; foremen</td><td class="num">4</td></tr>
+            <tr><td>Skilled workforce &amp; dredger crew</td><td class="num">13</td></tr>
+            <tr><td>Masters, operators, fitters &amp; lever men</td><td class="num">9</td></tr>
+            <tr><td><b>Total</b></td><td class="num"><b>74</b></td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap grid-2" style="align-items:start">
+      <div class="panel">
+        <span class="tag">Mission &amp; values</span>
+        <p>Our mission is to meet our customers' demands with high-quality service at a competitive cost, delivered on time.</p>
+        <dl class="spec mt"><dt>Transparency</dt><dd>Clear, clean communication with every stakeholder.</dd><dt>Integrity</dt><dd>Keeping promises and the quality of our work.</dd><dt>Coherence</dt><dd>Logical and consistent, at every stage.</dd></dl>
+      </div>
+      <div class="panel">
+        <span class="tag">Corporate information</span>
+        <dl class="spec">
+          <dt>Legal name</dt><dd>S.S. Trading</dd>
+          <dt>Firm type</dt><dd>Registered partnership firm, RJSC</dd>
+          <dt>Certificate</dt><dd>CHP 2310/2016</dd>
+          <dt>TIN</dt><dd>436846385996 / Circle-4</dd>
+          <dt>Enlistments</dt><dd>NSD Chittagong (Bangladesh Navy); BEPZA</dd>
+          <dt>Corporate office</dt><dd>Shafi Bhaban (Level 4), Plot 6, Agrabad C/A, Chattogram</dd>
+          <dt>Registered office</dt><dd>Saltgola Bandar, Chattogram</dd>
+          <dt>Sister concern</dt><dd>T.S. Dredging &amp; Heavy Engineering Ltd</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ CONTACT ============ -->
+<div data-page="contact" hidden>
+  <section class="sheet-head">
+    <div class="wrap">
+      <p class="eyebrow">Sheet 08 · <b>Contact</b></p>
+      <h1>Start a project</h1>
+      <p class="lede">Tell us about the vessel, supply or project. We reply to every serious enquiry within two working days.</p>
+    </div>
+  </section>
+  <section class="band">
+    <div class="wrap contact-grid">
+      <div>
+        <div class="cline"><span class="k">Email</span><span class="v">sabbab@sst-tsdhel.com</span></div>
+        <div class="cline"><span class="k">Phone</span><span class="v">+88 0131721637</span></div>
+        <div class="cline"><span class="k">Corporate office</span><span class="v">Shafi Bhaban (Level 4), Plot 6, Agrabad C/A, Chattogram, Bangladesh</span></div>
+        <div class="cline"><span class="k">Registered office</span><span class="v">Saltgola Bandar, Chattogram</span></div>
+        <div class="cline"><span class="k">Hours</span><span class="v">Sunday to Thursday, 9:00 to 18:00 (UTC+6)</span></div>
+      </div>
+      <div>
+        <form id="enq" novalidate>
+          <div class="row2">
+            <label for="f-name">Name<input id="f-name" name="name" required autocomplete="name"></label>
+            <label for="f-company">Company<input id="f-company" name="company" autocomplete="organization"></label>
+          </div>
+          <div class="row2">
+            <label for="f-email">Email<input id="f-email" name="email" type="email" required autocomplete="email"></label>
+            <label for="f-country">Country<input id="f-country" name="country" autocomplete="country-name"></label>
+          </div>
+          <div class="row2">
+            <label for="f-type">Enquiry
+              <select id="f-type" name="type"><option>Newbuild in Bangladesh</option><option>Shipbuilding project management</option><option>Pontoon, barge or small vessel supply</option><option>Jetty, dredging or marine works</option><option>Other</option></select>
+            </label>
+            <label for="f-vessel">Vessel type &amp; size<input id="f-vessel" name="vessel" placeholder="e.g. 32 m harbour tug, 1,000 t pontoon"></label>
+          </div>
+          <label for="f-msg">Details<textarea id="f-msg" name="msg" placeholder="Trade, class, delivery window, budget, or the items you need supplied"></textarea></label>
+          <p class="note" id="f-err" role="alert" hidden>Please add your name and a valid email so we can reply.</p>
+          <div class="btns"><button class="btn solid" type="submit">Prepare enquiry <span class="arr">→</span></button></div>
+        </form>
+        <div class="out mt" id="out" hidden>
+          <p class="eyebrow">Your enquiry</p>
+          <pre id="outText"></pre>
+          <div class="btns"><a class="btn solid" id="mailLink" href="#">Open in email</a><button class="btn" type="button" id="copyBtn">Copy text</button></div>
+          <p class="note">If your email app does not open, copy the text and send it to sabbab@sst-tsdhel.com.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+</main>
+
+<footer>
+  <div class="stripe"></div>
+  <div class="wrap">
+    <div class="tblock">
+      <div><span class="k">SS Trading</span><p class="note">Shipbuilding project management, marine supply and marine works from Chattogram, Bangladesh. Sister concern: T.S. Dredging &amp; Heavy Engineering Ltd.</p></div>
+      <div><span class="k">Pages</span><div class="links"><a href="#build">Build with us</a><a href="#consulting">Consulting</a><a href="#supply">Supply</a><a href="#projects">Projects</a><a href="#insights">Insights</a><a href="#company">Company</a><a href="#contact">Contact</a></div></div>
+      <div><span class="k">Contact</span><div class="links"><span class="note">sabbab@sst-tsdhel.com</span><span class="note">+88 0131721637</span><span class="note">Shafi Bhaban (Level 4), Agrabad C/A, Chattogram</span></div></div>
+      <div><span class="k">Title block</span><div class="dwg"><span>DWG</span><b>SST-WEB</b><span>REV</span><b>2026.10</b><span>SHEET</span><b id="sheetNo">01 / 08</b></div></div>
+    </div>
+    <div class="legal"><span>© 2026 S.S. Trading · All rights reserved</span><span>RJSC CHP 2310/2016 · NSD &amp; BEPZA enlisted</span></div>
+  </div>
+</footer>
+
+<script>
+/*
+  SS Trading Insights articles.
+  To publish a new article, copy one block below, paste it at the TOP of the list, and edit it.
+  body items: ["p","paragraph"], ["h","heading"], ["ul",["item","item"]]
+  li = the ready-made LinkedIn post text (the article link is added automatically).
+*/
+var SITE="https://sst-tsdhel.com/";
+var ARTICLES=[
+{slug:"a-build-in-bangladesh",cat:"Newbuild guide",date:"4 October 2026",read:"6 min read",author:"SS Trading",
+ title:"Building a vessel in Bangladesh: a shipowner's checklist",
+ summary:"The price advantage is real. So are the ways a project can go wrong. Six things we check before any newbuild contract is signed.",
+ li:"Thinking about building a ferry, tug or coaster in Bangladesh? The price is attractive, but the contract decides the outcome.\n\nOur 6-point checklist for shipowners:\n1. Match the yard to the vessel\n2. Fix the specification before the price\n3. Choose class early\n4. Protect your instalments\n5. Put your own team on site\n6. Plan delivery as carefully as construction\n\nFull article:",
+ body:[
+ ["p","Bangladesh has become a credible place to build small and mid-size steel vessels. Yards around Chattogram and Khulna deliver ferries, tugs, patrol craft and cargo ships to owners at home and abroad. Our own current work includes an 81 m passenger ferry for Kenya Ports Authority and a series of 12,500 DWT carriers for Dutch owners."],
+ ["p","For an owner, the price advantage is real. So are the ways a project can go wrong. This is the checklist we work through before a contract is signed."],
+ ["h","1. Match the yard to the vessel"],
+ ["p","Every yard has a sweet spot. Check its recent deliveries of similar size and complexity, its berth or dock dimensions and launching method, and whether key trades such as welding, piping and electrical work are in-house or subcontracted. Visit the yard and look at work in progress, not only the brochure."],
+ ["h","2. Fix the specification before you fix the price"],
+ ["p","Ask every yard to quote against the same outline specification, general arrangement and maker's list. A vague specification produces a low quotation followed by expensive variation orders."],
+ ["h","3. Choose the class society early"],
+ ["p","Agree the classification society and flag at the enquiry stage. Class rules drive scantlings, equipment and plan approval time, so they change both price and schedule."],
+ ["h","4. Protect your instalments"],
+ ["p","Tie payments to physical milestones and secure every pre-delivery instalment. Typical milestones are:"],
+ ["ul",["Contract signing","Steel cutting","Keel laying","Launching","Delivery"]],
+ ["p","A bank refund guarantee is the usual security. Where it is hard to obtain, alternatives include escrow arrangements, a heavier delivery instalment, and owner-supplied main equipment."],
+ ["h","5. Put your own people on site"],
+ ["p","A resident owner's team that inspects steelwork, welding, coating and outfitting, and witnesses class tests, catches problems while they are still cheap to fix. Ask for weekly photo reports against the agreed schedule."],
+ ["h","6. Plan delivery as carefully as construction"],
+ ["p","For export vessels, plan the delivery voyage or heavy-lift shipment, crew familiarisation, spares and documentation well before sea trials. Delivery is where months of good work can be undone by a missing certificate."],
+ ["p","SS Trading acts as the owner's team on Bangladeshi newbuilds, from specification to delivery. If you are planning a vessel, we are happy to review your requirements and suggest suitable yards."]
+ ]},
+{slug:"a-refund-guarantees",cat:"Finance & contracts",date:"4 October 2026",read:"5 min read",author:"SS Trading",
+ title:"Refund guarantees: the issue every Bangladesh export order turns on",
+ summary:"Many export shipbuilding deals are won on price and lost on the refund guarantee. What it is, why it is hard to get locally, and how to structure around it.",
+ li:"Many export shipbuilding deals in Bangladesh are won on price and lost on the refund guarantee.\n\nWe explain what a refund guarantee is, why it is hard to obtain from local banks, and five ways owners and yards can structure payment security so a good order does not die at the contract stage.\n\nRead:",
+ body:[
+ ["p","An owner who orders a ship pays a large part of the price before the ship exists. The refund guarantee (RG) is the promise that this money comes back if the yard does not deliver. In export shipbuilding, no RG usually means no contract."],
+ ["h","What a refund guarantee is"],
+ ["p","An RG is an undertaking by a bank, issued on behalf of the shipyard, to repay the owner's pre-delivery instalments, usually with interest, if the contract is cancelled for the yard's default. Owners and their financiers look closely at who issues it, because the guarantee is only as good as the bank behind it."],
+ ["h","Why it is hard in Bangladesh"],
+ ["p","Bangladeshi yards are competitive on price and quality, but RGs are often the bottleneck. Local banks face exposure limits, yard balance sheets may be stretched by several projects at once, and foreign owners frequently ask for a guarantee from a bank they recognise, or for confirmation by an international bank. Industry bodies have proposed a central bank counter-guarantee facility to address this."],
+ ["h","Five ways to structure around it"],
+ ["ul",["A local bank RG confirmed by an international bank acceptable to the owner","Lower pre-delivery instalments and a heavier delivery payment, so less money is at risk","Escrow accounts with release against verified milestones","Owner-supplied main engines and major equipment, which reduce the yard's working capital need","Staged contracts where each instalment is matched by visible physical progress"]],
+ ["h","Settle it before you sign"],
+ ["p","The worst time to discover an RG problem is after the price is agreed. We work with owners and yards to settle the guarantee package and payment schedule during contract negotiation, so the order can move straight to steel cutting."],
+ ["p","If you are negotiating a newbuild in Bangladesh and the refund guarantee is the sticking point, talk to us."]
+ ]},
+{slug:"a-pontoons-small-craft",cat:"Supply",date:"4 October 2026",read:"5 min read",author:"SS Trading",
+ title:"Pontoons, barges and rescue boats: buying small craft that last",
+ summary:"Whether a pontoon lasts five years or twenty-five is decided before steel is cut. Five things buyers should specify.",
+ li:"Buying a pontoon, barge or workboat? Whether it lasts 5 years or 25 is decided before steel is cut.\n\nFive things to specify: the real duty, plate and coating, welding inspection, outfitting and spares, and delivery to site.\n\nWe have built heavy-duty pontoons from 550 to 1,500 tonnes and rescue boats for the Kenya Maritime Authority. Read:",
+ body:[
+ ["p","Small craft and floating structures are often bought on price per tonne. The cheapest unit is rarely the cheapest over its life. We have built heavy-duty pontoons from 550 to 1,500 tonnes, a crane-mounted pontoon carrying a 45 t crane, passenger landing pontoons for Chittagong Port Authority, and search and rescue boats for Kenya Maritime Authority. These are the points that make the difference."],
+ ["h","1. Specify the real duty"],
+ ["p","State the maximum deck load and how it is applied, the operating area and sea state, how often the unit will be moved, and whether it will ground at low tide. A bridge-construction pontoon and a passenger landing pontoon need very different structures."],
+ ["h","2. Plate thickness and coating"],
+ ["p","Corrosion margins and the coating system decide service life in tropical brackish water. Ask for the coating specification, surface preparation standard and dry film thickness in writing."],
+ ["h","3. Welding and inspection"],
+ ["p","Agree the inspection regime up front: weld procedures, welder qualification, tank and hose tests, and whether a class society or independent surveyor will witness them."],
+ ["h","4. Outfitting and spares"],
+ ["p","Bollards, fenders, access hatches, ladders and lighting are cheap to fit in the yard and expensive to add later. For boats, agree the spares package, manuals and crew training with the order."],
+ ["h","5. Delivery to site"],
+ ["p","Plan towage or transport, insurance and installation with the build. A pontoon that arrives on time but cannot be moored is not delivered."],
+ ["p","SS Trading builds and supplies pontoons, barges and small vessels to your duty, and delivers them to site. Send us your requirements for a quotation."]
+ ]}
+];
+
+</script>
+<script>
+/* SS Trading website: routing, build-berth animation, newbuild cost estimator, share and enquiry form. */
+(function(){
+  var order=["home","build","consulting","supply","projects","insights","company","contact"];
+  var pages=[].slice.call(document.querySelectorAll("[data-page]"));
+  var navLinks=[].slice.call(document.querySelectorAll(".nav a"));
+  var nav=document.getElementById("nav"),btn=document.getElementById("menuBtn");
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+
+  function postCard(a){
+    return '<a class="post" href="#'+a.slug+'"><span class="tag">'+esc(a.cat)+'</span><h3>'+esc(a.title)+'</h3><p>'+esc(a.summary)+'</p><span class="meta">'+esc(a.date)+' · '+esc(a.read)+'</span><span class="more">Read article →</span></a>';
+  }
+  document.getElementById("allPosts").innerHTML=ARTICLES.map(postCard).join("");
+  document.getElementById("homePosts").innerHTML=ARTICLES.slice(0,3).map(postCard).join("");
+
+  function renderArticle(a){
+    var url=SITE+"#"+a.slug;
+    var body=a.body.map(function(b){
+      if(b[0]==="h") return "<h2>"+esc(b[1])+"</h2>";
+      if(b[0]==="ul") return "<ul>"+b[1].map(function(x){return "<li>"+esc(x)+"</li>"}).join("")+"</ul>";
+      return "<p>"+esc(b[1])+"</p>";
+    }).join("");
+    document.getElementById("artView").innerHTML=
+      '<a class="back" href="#insights">← All insights</a>'+
+      '<span class="tag">'+esc(a.cat)+'</span><h1 style="font-size:clamp(1.9rem,4vw,2.8rem)">'+esc(a.title)+'</h1>'+
+      '<p class="meta">'+esc(a.author)+' · '+esc(a.date)+' · '+esc(a.read)+'</p>'+
+      shareBar(a,url)+'<div class="article-body">'+body+'</div>'+
+      '<div class="endcta"><p class="eyebrow" style="color:var(--cyan)">Planning a vessel or a supply order?</p><h3 style="font-size:1.4rem">Talk to the team that manages builds in Bangladesh and Kenya.</h3><div class="btns"><a class="btn solid" href="#contact">Start a project <span class="arr">→</span></a></div></div>'+
+      shareBar(a,url);
+  }
+  function shareBar(a,url){
+    var li="https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent(url);
+    var wa="https://wa.me/?text="+encodeURIComponent(a.title+" "+url);
+    return '<div class="share"><span class="k">Share</span>'+
+      '<a class="btn sm solid" href="'+li+'" target="_blank" rel="noopener">LinkedIn</a>'+
+      '<a class="btn sm" href="'+wa+'" target="_blank" rel="noopener">WhatsApp</a>'+
+      '<button class="btn sm" type="button" data-copy="link" data-slug="'+a.slug+'">Copy link</button>'+
+      '<button class="btn sm" type="button" data-copy="post" data-slug="'+a.slug+'">Copy LinkedIn post</button></div>';
+  }
+  function copyText(t,el,label){
+    var done=function(){el.textContent="Copied";setTimeout(function(){el.textContent=label},1800)};
+    try{navigator.clipboard.writeText(t).then(done,function(){el.textContent="Copy failed"})}catch(x){el.textContent="Copy failed"}
+  }
+  document.addEventListener("click",function(e){
+    var b=e.target.closest("[data-copy]");if(!b)return;
+    var a=ARTICLES.find(function(x){return x.slug===b.dataset.slug});if(!a)return;
+    var url=SITE+"#"+a.slug;
+    if(b.dataset.copy==="link") copyText(url,b,"Copy link");
+    else copyText(a.li+" "+url+"\n\n#shipbuilding #Bangladesh #maritime #shipowners",b,"Copy LinkedIn post");
+  });
+
+  function show(){
+    var id=(location.hash||"#home").slice(1),pageId=id,sheet,toEst=false;
+    if(id==="estimate"){id="home";pageId="home";toEst=true}
+    var art=ARTICLES.find(function(x){return x.slug===id});
+    if(art){pageId="article";renderArticle(art);sheet=order.indexOf("insights")+1}
+    else{if(order.indexOf(id)<0){id="home";pageId="home"}sheet=order.indexOf(id)+1}
+    pages.forEach(function(p){p.hidden=p.dataset.page!==pageId});
+    var navId=art?"insights":id;
+    navLinks.forEach(function(a){
+      if(a.getAttribute("href")==="#"+navId && !a.classList.contains("cta")) a.setAttribute("aria-current","page");
+      else a.removeAttribute("aria-current");
+    });
+    document.getElementById("sheetNo").textContent=("0"+sheet).slice(-2)+" / 08";
+    nav.classList.remove("open");btn.setAttribute("aria-expanded","false");
+    if(toEst) setTimeout(scrollToEst,30); else window.scrollTo(0,0);
+    yardActive=(pageId==="home");
+  }
+  function scrollToEst(){var el=document.getElementById("estimator");if(el)el.scrollIntoView({behavior:"smooth",block:"start"})}
+  document.addEventListener("click",function(e){
+    var a=e.target.closest('a[href="#estimate"]');
+    if(a&&location.hash==="#estimate"){e.preventDefault();scrollToEst();nav.classList.remove("open")}
+  });
+  window.addEventListener("hashchange",show);
+  btn.addEventListener("click",function(){var o=nav.classList.toggle("open");btn.setAttribute("aria-expanded",o?"true":"false")});
+
+  /* ---------- Build berth animation ---------- */
+  var NS="http://www.w3.org/2000/svg";
+  var yardActive=true;
+  var framesG=document.getElementById("frames"),blocksG=document.getElementById("blocks");
+  var frames=[],blocks=[];
+  for(var i=0;i<14;i++){var l=document.createElementNS(NS,"line");var x=15+i*20;l.setAttribute("x1",x);l.setAttribute("x2",x);l.setAttribute("y1",-20);l.setAttribute("y2",72);l.setAttribute("class","y-frame");framesG.appendChild(l);frames.push(l)}
+  for(i=0;i<5;i++){var r=document.createElementNS(NS,"rect");r.setAttribute("x",i*60);r.setAttribute("y",-20);r.setAttribute("width",60);r.setAttribute("height",92);r.setAttribute("class","y-blk");r.setAttribute("clip-path","url(#hullClip)");blocksG.appendChild(r);blocks.push(r)}
+  var supers=[].slice.call(document.querySelectorAll("#supers > g"));
+  var ship=document.getElementById("ship"),keel=document.getElementById("keel"),outline=document.getElementById("outline"),paint=document.getElementById("paint");
+  var trolley=document.getElementById("trolley"),hook=document.getElementById("hook");
+  var wake=document.getElementById("wake"),wk=[1,2,3].map(function(n){return document.getElementById("wk"+n)});
+  var splash=document.getElementById("splash"),sp=[document.getElementById("sp1"),document.getElementById("sp2")];
+  var smoke=[0,1,2].map(function(n){return document.getElementById("sm"+n)});
+  var stageEls=[].slice.call(document.querySelectorAll("#stages li")),cap=document.getElementById("stageCap");
+  var caps=["Keel laid on the berth, frames erected","Hull blocks lifted into place by the gantry","Superstructure fitted, hull painted","Launched into the Karnaphuli","Sea trials, then delivery to the owner"];
+  var T=18000;
+  function cl(x){return x<0?0:x>1?1:x}
+  function seg(t,a,b){return cl((t-a)/(b-a))}
+  function ease(x){return x<.5?2*x*x:1-Math.pow(-2*x+2,2)/2}
+  var lastStage=-1;
+  function frame(t,now){
+    var tx=60,ty=192,trX=200,hookY=124;
+    var kp=seg(t,.03,.07);keel.style.opacity=kp;outline.style.opacity=seg(t,.04,.1);
+    frames.forEach(function(f,i){var a=.07+i*.008;f.style.opacity=seg(t,a,a+.015)});
+    blocks.forEach(function(b,i){
+      var a=.2+i*.048,e=a+.042,p=ease(seg(t,a,e)),off=-(1-p)*150;
+      b.setAttribute("transform","translate(0 "+off.toFixed(1)+")");
+      b.style.opacity=t>=a?1:0;
+      if(t>=a-.008&&t<=e+.004){trX=60+i*60+30;hookY=192-20+off}
+    });
+    supers.forEach(function(g,i){
+      var a=.45+i*.024,e=a+.03,p=ease(seg(t,a,e)),off=-(1-p)*60;
+      g.setAttribute("transform","translate(0 "+off.toFixed(1)+")");
+      g.style.opacity=t>=a?1:0;
+      if(t>=a-.008&&t<=e+.004){trX=60+(+g.dataset.cx);hookY=192-60+off}
+    });
+    paint.style.opacity=seg(t,.58,.63);
+    var lp=ease(seg(t,.64,.74));
+    tx=60+380*lp;ty=192+56*ease(seg(lp,.7,1));
+    var spP=seg(t,.78,.97);
+    if(spP>0){tx=440+640*spP*spP}
+    if(t>.72){ty+=Math.sin(now/420)*1.4}
+    ship.setAttribute("transform","translate("+tx.toFixed(1)+" "+ty.toFixed(1)+")");
+    trolley.setAttribute("x",trX-12);hook.setAttribute("x1",trX);hook.setAttribute("x2",trX);hook.setAttribute("y2",Math.max(112,hookY));
+    // splash
+    var s=seg(t,.73,.8);splash.style.opacity=s>0&&s<1?1-s:0;
+    sp[0].setAttribute("rx",10+s*70);sp[0].setAttribute("ry",2+s*5);
+    sp[1].setAttribute("rx",4+s*40);sp[1].setAttribute("ry",1+s*3);
+    sp[0].setAttribute("cx",tx+150);sp[1].setAttribute("cx",tx+150);
+    // wake
+    wake.style.opacity=spP>0&&spP<1?Math.min(1,spP*6):0;
+    var sx=tx+4;
+    wk[0].setAttribute("d","M"+sx+" 294 Q"+(sx-60)+" 298 "+(sx-150)+" 304");
+    wk[1].setAttribute("d","M"+(sx-20)+" 297 Q"+(sx-90)+" 304 "+(sx-200)+" 314");
+    wk[2].setAttribute("d","M"+(sx+20)+" 295 L"+(sx-40)+" 296");
+    // smoke
+    smoke.forEach(function(c,i){
+      if(spP>0||(t>.66&&t<.78)){var k=((now/1600)+i/3)%1;c.setAttribute("cy",-48-k*36);c.setAttribute("cx",106-k*30);c.setAttribute("r",3+k*9);c.style.opacity=(1-k)*.9}
+      else c.setAttribute("r",0);
+    });
+    var st=t<.2?0:t<.45?1:t<.635?2:t<.77?3:4;
+    if(st!==lastStage){lastStage=st;stageEls.forEach(function(li,i){li.classList.toggle("on",i===st);li.classList.toggle("done",i<st)});cap.textContent=caps[st]}
+  }
+  var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var t0=null;
+  function loop(now){
+    if(t0===null)t0=now;
+    if(yardActive&&!document.hidden){frame(((now-t0)%T)/T,now)}
+    requestAnimationFrame(loop);
+  }
+  show();
+  if(reduce){frame(.76,0);stageEls.forEach(function(li){li.classList.add("done")})}
+  else requestAnimationFrame(loop);
+
+  /* ---------- Newbuild cost estimator ----------
+     Indicative parametric model for Bangladeshi yards (2026 USD).
+     Steel weight from cubic number L×B×D; power from Admiralty coefficient (or bollard pull);
+     hull, machinery and outfit priced per type, then design/class, overhead and series effects. */
+  var TYPES={
+    tug:{n:"Tug (harbour / coastal)",L:30,LB:3.0,BD:2.2,DT:1.25,Cb:.55,V:12,st:.18,hr:2900,ok:1.0,prop:"azimuth",bp:1},
+    ferry:{n:"Passenger ferry",L:45,LB:4.2,BD:2.8,DT:1.6,Cb:.55,V:14,C:330,st:.12,hr:2700,ok:1.3,pax:300,alu:1},
+    roro:{n:"Ro-ro / vehicle ferry",L:60,LB:4.5,BD:2.6,DT:1.6,Cb:.65,V:12,C:350,st:.13,hr:2600,ok:1.0,pax:200},
+    waterbus:{n:"Water bus / passenger launch",L:22,LB:4.0,BD:2.6,DT:1.7,Cb:.5,V:12,C:300,st:.11,hr:2600,ok:1.2,pax:120,alu:1},
+    sar:{n:"Search & rescue / patrol boat",L:16,LB:3.6,BD:2.2,DT:1.7,Cb:.42,V:22,C:170,st:.13,hr:3200,ok:1.4,alu:1},
+    workboat:{n:"Workboat / crew boat",L:18,LB:3.3,BD:2.3,DT:1.6,Cb:.5,V:14,C:260,st:.13,hr:2700,ok:.9,alu:1},
+    cargo:{n:"General cargo / coaster",L:80,LB:6.2,BD:2.0,DT:1.3,Cb:.75,V:11.5,C:320,st:.09,hr:2800,ok:.9,dwt:1},
+    tanker:{n:"Oil / product tanker",L:70,LB:6.0,BD:2.0,DT:1.3,Cb:.78,V:11,C:320,st:.10,hr:2900,ok:1.1,dwt:1},
+    dredger:{n:"Cutter suction dredger",L:30,LB:3.0,BD:4.5,DT:1.4,Cb:.8,st:.14,hr:2500,ok:1.6,kwL:55},
+    barge:{n:"Deck / hopper barge (towed)",L:50,LB:4.0,BD:4.0,DT:1.3,Cb:.88,st:.11,hr:1900,ok:.2,unp:1},
+    pontoon:{n:"Pontoon (heavy-duty / landing)",L:40,LB:3.3,BD:4.5,DT:1.8,Cb:.95,st:.12,hr:1800,ok:.25,unp:1},
+    crane:{n:"Crane barge / crane pontoon",L:45,LB:3.0,BD:4.0,DT:1.6,Cb:.9,st:.13,hr:1900,ok:.8,unp:1}
+  };
+  var SEG=[["Hull steel & fabrication","--s1"],["Machinery & propulsion","--s2"],["Outfitting & systems","--s3"],["Design, class & approvals","--s4"],["Overhead, margin & delivery","--s5"]];
+  var MIL=[["Contract signing",.2],["Steel cutting",.2],["Keel laying",.2],["Launching",.2],["Delivery",.2]];
+  var $=function(id){return document.getElementById(id)};
+  var opts=Object.keys(TYPES).map(function(k){return '<option value="'+k+'">'+esc(TYPES[k].n)+'</option>'}).join("");
+  $("e-type").innerHTML=opts;$("q-type").innerHTML=opts;$("q-type").value="ferry";$("q-len").placeholder="e.g. 45";
+  function num(id){var v=parseFloat($(id).value);return isFinite(v)&&v>0?v:null}
+  function r1(x){return Math.round(x*10)/10}
+  function amt(v){if(v>=1e7)return (v/1e6).toFixed(1).replace(/\.0$/,"")+"M";if(v>=1e6)return (v/1e6).toFixed(2).replace(/\.?0+$/,"")+"M";return Math.round(v/1000).toLocaleString("en-US")+"k"}
+  function money(v){return "USD "+amt(v)}
+  function nice(v){var s=v>=1e7?1e5:v>=1e6?5e4:v>=2e5?1e4:5e3;return Math.round(v/s)*s}
+  var last=null;
+
+  function syncFields(){
+    var t=TYPES[$("e-type").value];
+    document.querySelectorAll("[data-show]").forEach(function(el){
+      var k=el.dataset.show,on=true;
+      if(k==="pax")on=!!t.pax; else if(k==="dwt")on=!!t.dwt; else if(k==="bp")on=!!t.bp;
+      else if(k==="powered")on=!t.unp; else if(k==="speed")on=!t.bp&&!t.kwL;
+      el.hidden=!on;
+    });
+    var alu=$("e-mat").querySelector('[value="alu"]');alu.disabled=!t.alu;if(!t.alu)$("e-mat").value="steel";
+  }
+  function compute(){
+    var key=$("e-type").value,t=TYPES[key];
+    var L=num("e-len")||t.L;
+    var B=num("e-beam")||r1(L/t.LB),D=num("e-depth")||r1(B/t.BD),T=num("e-draft")||r1(D/t.DT);
+    if(T>D)T=r1(D*.85);
+    $("e-len").placeholder=t.L;$("e-beam").placeholder=r1(L/t.LB);$("e-depth").placeholder=r1(B/t.BD);$("e-draft").placeholder=r1(D/t.DT);
+    var qty=Math.max(1,Math.min(20,Math.round(num("e-qty")||1)));
+    var alu=$("e-mat").value==="alu"&&t.alu;
+    var cls=$("e-class").value,out=$("e-outfit").value,del=$("e-deliv").value,prop=$("e-prop").value;
+    var disp=t.Cb*L*B*T*1.025;
+    var steel=t.st*L*B*D, wt=alu?steel*.55:steel;
+    var clsF={iacs:1,other:.97,local:.93}[cls],clsP={iacs:.055,other:.04,local:.025}[cls];
+    var hull=wt*(alu?11000:t.hr)*clsF;
+    // power
+    var P=0,V=null,bp=null;
+    if(t.unp){P=key==="crane"?Math.round(L*4):0}
+    else if(t.bp){bp=num("e-bp")||Math.round(1.8*L);$("e-bp").placeholder=Math.round(1.8*L);P=bp*75}
+    else if(t.kwL){P=t.kwL*L}
+    else{V=num("e-speed")||t.V;$("e-speed").placeholder=t.V;P=Math.pow(disp,2/3)*Math.pow(V,3)/t.C*1.24}
+    var Pest=Math.round(P/10)*10;
+    if(!t.unp){$("e-power").placeholder="est. "+Pest.toLocaleString("en-US");var Pu=num("e-power");if(Pu)P=Pu}
+    var rate=(300+150*Math.min(1,P/4000))*({shaft:1,azimuth:1.45,jet:1.3}[prop]||1);
+    var mach=t.unp?(P?P*300:0):P*rate+15000;
+    if($("e-owner").checked&&!t.unp)mach*=.45;
+    var outF={basic:.85,std:1,high:1.3}[out];
+    var pax=t.pax?(num("e-pax")||t.pax):0; if(t.pax)$("e-pax").placeholder=t.pax;
+    var outfit=(t.ok*hull+.12*mach+pax*900)*outF;
+    var base=hull+mach+outfit, design=base*clsP;
+    var ohP=del==="domestic"?.13:.15, delivery=del==="delivered"?(t.unp?.03*base+40000:.02*base+30000):0;
+    var over=(base+design)*ohP+delivery;
+    var serF=qty===1?1:qty===2?.97:qty<=4?.94:.91;
+    var parts=[hull,mach,outfit,design,over].map(function(x){return x*serF});
+    var mid=parts.reduce(function(a,b){return a+b},0);
+    var lo=nice(mid*.85),hi=nice(mid*1.2);
+    var steelEq=alu?wt/.55:wt;
+    var months=Math.max(5,Math.min(30,Math.round(6+steelEq/35+(out==="high"?1:0)+(del!=="domestic"?1:0))));
+    var seriesM=months+Math.round(Math.max(1.5,months*.25)*(qty-1));
+    last={key:key,t:t,L:L,B:B,D:D,T:T,qty:qty,alu:alu,cls:cls,out:out,del:del,prop:prop,disp:disp,wt:wt,P:P,V:V,bp:bp,pax:pax,parts:parts,mid:mid,lo:lo,hi:hi,months:months,seriesM:seriesM};
+    render();
+  }
+  function render(){
+    var r=last;
+    $("r-price").textContent=money(r.lo)+" to "+amt(r.hi);
+    $("r-sub").innerHTML="Central estimate <b>"+money(nice(r.mid))+"</b> per vessel";
+    var ser=$("r-series");ser.hidden=r.qty===1;
+    if(r.qty>1)ser.innerHTML="Series of "+r.qty+": <b>"+money(nice(r.lo*r.qty))+" to "+amt(nice(r.hi*r.qty))+"</b> in total, including a series discount";
+    var w=[];if(r.L>150)w.push("Vessels over 150 m are reviewed case by case; few Bangladeshi berths take them.");
+    if(r.L<10)w.push("Very small craft are often built in GRP; ask us about material options.");
+    if(r.T>=r.D)w.push("Draft should be less than depth.");
+    $("r-warn").hidden=!w.length;$("r-warn").textContent=w.join(" ");
+    var tot=r.mid;
+    $("r-bar").innerHTML=r.parts.map(function(v,i){return v>0?'<span style="flex-grow:'+v.toFixed(0)+';background:var('+SEG[i][1]+')" title="'+SEG[i][0]+": "+money(v)+'"></span>':""}).join("");
+    $("r-bar").setAttribute("aria-label","Cost breakdown: "+r.parts.map(function(v,i){return SEG[i][0]+" "+Math.round(v/tot*100)+"%"}).join(", "));
+    $("r-legend").innerHTML=r.parts.map(function(v,i){return '<li><i style="background:var('+SEG[i][1]+')"></i><span>'+SEG[i][0]+'</span><span class="v">'+money(nice(v))+'</span><span class="p">'+Math.round(v/tot*100)+'%</span></li>'}).join("");
+    $("k-steel").textContent=Math.round(r.wt).toLocaleString("en-US")+" t"+(r.alu?" Al":"");
+    $("k-disp").textContent=Math.round(r.disp).toLocaleString("en-US")+" t";
+    $("k-power").textContent=r.P?(Math.round(r.P/10)*10).toLocaleString("en-US")+" kW":"Unpowered";
+    $("k-time").textContent=r.months+" months"+(r.qty>1?" · "+r.seriesM+" for series":"");
+    $("r-pay").innerHTML=MIL.map(function(m){return "<tr><td>"+m[0]+" · "+Math.round(m[1]*100)+"%</td><td>"+money(nice(r.mid*m[1]))+"</td></tr>"}).join("");
+  }
+  function summary(){
+    var r=last,lines=[
+      "NEWBUILD ESTIMATE REQUEST",
+      "Vessel: "+r.t.n+(r.qty>1?" × "+r.qty:""),
+      "Dimensions: L "+r.L+" m, B "+r.B+" m, D "+r.D+" m, T "+r.T+" m",
+      r.t.bp?"Bollard pull: "+r.bp+" t":(r.V?"Service speed: "+r.V+" kn":""),
+      r.P?"Installed power: "+Math.round(r.P)+" kW ("+$("e-prop").selectedOptions[0].text+")":"Unpowered",
+      r.pax?"Passengers: "+r.pax:"",
+      r.t.dwt&&num("e-dwt")?"Deadweight: "+num("e-dwt")+" DWT":"",
+      "Hull material: "+(r.alu?"Aluminium":"Steel"),
+      "Class: "+$("e-class").selectedOptions[0].text,
+      "Outfit: "+$("e-outfit").selectedOptions[0].text,
+      "Delivery: "+$("e-deliv").selectedOptions[0].text+($("e-flag").value?" · "+$("e-flag").value:""),
+      $("e-date").value?"Target delivery: "+$("e-date").value:"",
+      $("e-owner").checked?"Owner-supplied main engines":"",
+      "",
+      "Indicative price per vessel: "+money(r.lo)+" to "+money(r.hi)+" (central "+money(nice(r.mid))+")",
+      r.qty>1?"Series total: "+money(nice(r.lo*r.qty))+" to "+money(nice(r.hi*r.qty)):"",
+      "Indicative build time: "+r.months+" months"+(r.qty>1?", series "+r.seriesM+" months":"")
+    ];
+    return lines.filter(function(x,i){return x!==""||i===13}).join("\n");
+  }
+  var form2=$("estForm");
+  form2.addEventListener("input",function(e){if(e.target.id==="e-type"){["e-beam","e-depth","e-draft","e-speed","e-power","e-bp","e-pax"].forEach(function(id){$(id).value=""});syncFields()}if(e.target.id==="e-len"){["e-beam","e-depth","e-draft"].forEach(function(id){$(id).value=""})}compute()});
+  form2.addEventListener("change",function(e){if(e.target.id==="e-type"||e.target.id==="e-mat")syncFields();compute()});
+  $("quick").addEventListener("submit",function(e){
+    e.preventDefault();
+    $("e-type").value=$("q-type").value;["e-beam","e-depth","e-draft","e-speed","e-power","e-bp","e-pax"].forEach(function(id){$(id).value=""});
+    $("e-len").value=$("q-len").value;$("e-qty").value=$("q-qty").value||1;
+    syncFields();compute();scrollToEst();
+  });
+  $("r-quote").addEventListener("click",function(){
+    $("f-type").value="Newbuild in Bangladesh";
+    $("f-vessel").value=last.t.n+", "+last.L+" m"+(last.qty>1?" × "+last.qty:"");
+    $("f-msg").value=summary()+"\n\nAnything else we should know:\n";
+    location.hash="#contact";
+    setTimeout(function(){$("f-name").focus({preventScroll:true})},200);
+  });
+  $("r-copy").addEventListener("click",function(){copyText(summary(),$("r-copy"),"Copy summary")});
+  $("e-type").value="ferry";syncFields();compute();
+
+  /* ---------- Enquiry form ---------- */
+  var form=document.getElementById("enq"),out=document.getElementById("out"),txt=document.getElementById("outText");
+  var err=document.getElementById("f-err"),mail=document.getElementById("mailLink"),copy=document.getElementById("copyBtn");
+  form.addEventListener("submit",function(e){
+    e.preventDefault();
+    var v=function(id){return document.getElementById(id).value.trim()};
+    var email=v("f-email");
+    if(!v("f-name")||!/^\S+@\S+\.\S+$/.test(email)){err.hidden=false;return}
+    err.hidden=true;
+    var body="Name: "+v("f-name")+"\nCompany: "+(v("f-company")||"-")+"\nEmail: "+email+"\nCountry: "+(v("f-country")||"-")+"\nEnquiry: "+v("f-type")+"\nVessel: "+(v("f-vessel")||"-")+"\n\n"+(v("f-msg")||"");
+    txt.textContent=body;
+    mail.href="mailto:sabbab@sst-tsdhel.com?subject="+encodeURIComponent("Enquiry: "+v("f-type"))+"&body="+encodeURIComponent(body);
+    out.hidden=false;out.scrollIntoView({block:"nearest"});
+  });
+  copy.addEventListener("click",function(){
+    var fallback=function(){var r=document.createRange();r.selectNodeContents(txt);var s=getSelection();s.removeAllRanges();s.addRange(r);copy.textContent="Text selected"};
+    try{navigator.clipboard.writeText(txt.textContent).then(function(){copy.textContent="Copied"},fallback)}catch(x){fallback()}
+  });
+})();
+</script>
+</body>
+</html>
